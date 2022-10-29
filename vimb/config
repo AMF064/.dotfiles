@@ -1,0 +1,47 @@
+#Dark mode
+set dark-mode=true
+
+#Default page
+set home-page=https://duckduckgo.com
+
+#Default download directory
+set download-path=~/Downloads/browser
+
+#Inputbox autohide
+set input-autohide=true
+
+#Support for WebGL
+set webgl=true
+
+#Highlight the search
+set incsearch=true
+
+###FONTS###
+
+#Default for unspecified font
+set default-font=DejaVu Sans
+
+#Default monospace font
+set monospace-font=DejaVu Sans Mono
+
+#Default sans-serif font
+set sans-serif-font=DejaVu Sans
+
+#Default serif font
+set serif-font=DejaVu Serif
+
+###SHORTCUTS###
+
+#UC3M
+shortcut-add u=https://aulaglobal.uc3m.es
+
+#Google Account
+shortcut-add g=https://accounts.google.com
+
+
+###KEYMAPS###
+#Zoom keys
+
+nmap + zI
+nmap - zO
+nmap = zz
