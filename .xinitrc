@@ -51,8 +51,14 @@ fi
 xrandr --output Virtual-1 --mode 1024x768 
 setxkbmap gb &
 
+
+#Variables for setting the statusbar
+battery=$(acpi | sed 's/,/\n/g' | grep [0-9]*%)
+
+
+
 $HOME/.fehbg&
-while xsetroot -name "$(date +"%R")"
+while xsetroot -name "B:$battery | $(date +"%D %R")"
 do
 	sleep 1
 done &
