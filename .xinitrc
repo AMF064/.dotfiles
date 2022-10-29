@@ -54,11 +54,12 @@ setxkbmap gb &
 
 #Variables for setting the statusbar
 battery=$(acpi | sed 's/,/\n/g' | grep [0-9]*%)
+date=$(date +"%D %R")
 
 
 
 $HOME/.fehbg&
-while xsetroot -name "B:$battery | $(date +"%D %R")"
+while xsetroot -name "B:$battery | $date"
 do
 	sleep 1
 done &
