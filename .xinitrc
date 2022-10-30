@@ -59,10 +59,8 @@ date=$(date +"%D %R")
 
 
 $HOME/.fehbg&
-while :
-do
-    xsetroot -name "B:$battery | $date"
-	sleep 1 m
+while xsetroot -name "B:$battery | $date";do
+	sleep 1
 done &
 exec dwm
 
