@@ -38,6 +38,9 @@ shortcut-add u=https://aulaglobal.uc3m.es
 #Google Account
 shortcut-add g=https://accounts.google.com
 
+#Hack The box
+shortcut-add hack=https://hackthebox.com
+
 
 ###KEYMAPS###
 #Zoom keys
