@@ -48,20 +48,21 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-xrandr --output Virtual-1 --mode 1024x768 
 setxkbmap gb &
-
+$HOME/.fehbg &
 
 #Variables for setting the statusbar
-battery=$(acpi | sed 's/,//g' | awk '{print $4}')&
-date=$(date +"%D %R")&
+status() { \
+    #Battery
+    echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
+    #Date
+    date +"%D %R"
+}
 
 
-
-$HOME/.fehbg&
-while xsetroot -name "B:$battery | $date"
+while [ true ]
 do
-	sleep 1s
+    xsetroot -name "$(status | tr '\n' ' ')"
+	sleep 1m
 done &
 exec dwm
-
