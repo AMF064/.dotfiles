@@ -59,7 +59,7 @@ date=$(date +"%D %R")
 
 
 $HOME/.fehbg&
-while true
+while :
 do
     xsetroot -name "B:$battery | $date"
 	sleep 1m
