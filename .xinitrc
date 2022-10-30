@@ -62,7 +62,7 @@ $HOME/.fehbg&
 while :
 do
     xsetroot -name "B:$battery | $date"
-	sleep 1m
+	sleep 1 m
 done &
 exec dwm
 
