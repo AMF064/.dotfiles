@@ -53,7 +53,7 @@ setxkbmap gb &
 
 
 #Variables for setting the statusbar
-battery=$(acpi | sed 's/,/\n/g' | grep [0-9]*%)
+battery=$(acpi | sed 's/,//g' | awk '{print $4}')
 date=$(date +"%D %R")
 
 
@@ -61,7 +61,7 @@ date=$(date +"%D %R")
 $HOME/.fehbg&
 while xsetroot -name "B:$battery | $date"
 do
-	sleep 1
+	sleep 1m
 done &
 exec dwm
 
