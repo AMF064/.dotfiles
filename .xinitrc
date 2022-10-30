@@ -53,8 +53,8 @@ setxkbmap gb &
 
 
 #Variables for setting the statusbar
-battery=$(acpi | sed 's/,//g' | awk '{print $4}')
-date=$(date +"%D %R")
+battery=$(acpi | sed 's/,//g' | awk '{print $4}')&
+date=$(date +"%D %R")&
 
 
 
