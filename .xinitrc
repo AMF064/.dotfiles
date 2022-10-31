@@ -51,6 +51,9 @@ fi
 setxkbmap gb &
 $HOME/.fehbg &
 
+#Key repeat delay, key repeat rate
+xset r rate 300 50
+
 #Variables for setting the statusbar
 status() { \
     #Battery
