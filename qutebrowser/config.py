@@ -163,7 +163,7 @@ c.content.blocking.adblock.lists = [
 
 ##Keybindings
 config.bind("<p><t>", "tab-pin")
-config.bind(";w", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind(";v", "hint links spawn mpv {hint-url}")
 
 #No content autoplay and show PDFs in the browser
 c.content.autoplay = False

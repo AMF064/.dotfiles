@@ -50,6 +50,7 @@ fi
 
 setxkbmap gb &
 $HOME/.fehbg &
+sxhkd &
 
 #Key repeat delay, key repeat rate
 xset r rate 300 50

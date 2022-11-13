@@ -83,7 +83,7 @@ set splitbelow splitright
 set wildmode=longest,list,full
 
 "Clipboard
-set cb=unnamed
+set cb=unnamedplus
 
 "Keymaps
 nnoremap <C-h> <C-w>h

@@ -4,4 +4,4 @@ super + Escape
 super + b
     qutebrowser
 super + shift + f
-    $TERM -e vifm
+    st -e vifm
