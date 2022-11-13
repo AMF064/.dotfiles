@@ -5,3 +5,5 @@ super + b
     qutebrowser
 super + shift + f
     st -e vifm
+super + shift + {j, k}
+    amixer sset Master 5%{-,+}
