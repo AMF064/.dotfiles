@@ -162,17 +162,22 @@ c.content.blocking.adblock.lists = [
         ]
 
 ##Keybindings
-config.bind("<p><t>", "tab-pin")
-config.bind(";v", "hint links spawn mpv {hint-url}")
+config.bind('<p><t>', 'tab-pin')
+config.bind('<Shift-j>', 'tab-prev')
+config.bind('<Shift-k>', 'tab-next')
+config.bind(';v', 'hint links spawn mpv {hint-url}')
 
-#No content autoplay and show PDFs in the browser
+#No content autoplay and do not show PDFs in the browser
 c.content.autoplay = False
-c.content.pdfjs = True
+c.content.pdfjs = False
 
 #Downloads directory
 c.downloads.location.directory = "/home/amf/Downloads/browser/"
 
 #Fonts work fine, so no need to set them up yet!
+
+#Hints chars
+c.hints.chars = "asdfjkl;"
 
 #Remove finished downloads
 c.downloads.remove_finished = 5
