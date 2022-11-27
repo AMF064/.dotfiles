@@ -8,15 +8,6 @@
 "	      for Haiku:  ~/config/settings/vim/vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings, bail
-" out.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
-
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
@@ -25,11 +16,6 @@ else
     set undofile	" keep an undo file (undo changes after closing)
   endif
 endif
-
-"if &t_Co > 2 || has("gui_running")
-  "" Switch on highlighting the last used search pattern.
-  "set hlsearch
-"endif
 
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
@@ -55,11 +41,17 @@ set smartindent
 set expandtab
 set shiftwidth=4
 
-"Cursor
+"Cursor and cursor line
 set guicursor=
 
 "Search for local vimrc
 set exrc
+
+"Syntax
+syntax on
+
+"Colorscheme and true color support
+colorscheme desert
 
 " Relative numbers
 set number relativenumber
@@ -67,7 +59,7 @@ set number relativenumber
 "Incremental search
 set incsearch
 
-"Highlight search
+"Highlight search: off
 set nohls
 
 "Scrolloff
@@ -75,6 +67,9 @@ set scrolloff=8
 
 "Hidden buffer
 set hidden
+
+"No backup file
+set nobackup
 
 "Split windows
 set splitbelow splitright
@@ -86,10 +81,13 @@ set wildmode=longest,list,full
 set cb=unnamedplus
 
 "Keymaps
+let mapleader = " "
+nnoremap <C-F4> :q!<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <silent><C-t> :tabnew<CR>
-nnoremap <silent><C-ç> :tabn<CR>
-nnoremap <silent><C-tab> :tabp<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <leader>n :tabn<CR>
+nnoremap <leader>p :tabp<CR>
+nnoremap <leader>pv :Exp<CR>
