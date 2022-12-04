@@ -4,6 +4,7 @@ rm /home/amf/.bashrc
 #Make directories
 mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm
 mkdir -p /home/amf/Pictures/wallpapers
+mkdir -p /home/amf/Downloads/browser
 
 #Symbolic links
 ln -s /home/amf/.dotfiles/.xinitrc /home/amf/.xinitrc
