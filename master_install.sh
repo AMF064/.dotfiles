@@ -1,7 +1,11 @@
 #!/bin/sh
 
 #Install necessary packages
-pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxft ttf-liberation ttf-dejavu qutebrowser youtube-dl vifm dmenu zathura zathura-pdf-mudpf inetutils vim mpv alsa-utils sxhkd
+pacman -S xorg-server xorg-xinit xorg-xsetroot xorg-xrandr libxft ttf-liberation ttf-dejavu qutebrowser youtube-dl vifm dmenu zathura inetutils vim mpv alsa-utils sxhkd feh sxiv
+
+#Make directories
+#mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm
+#mkdir -p /home/amf/Pictures/wallpapers
 
 #Symbolic links
 #ln -s /home/amf/.dotfiles/.xinitrc /home/amf/.xinitrc
