@@ -1,4 +1,4 @@
 #!/bin/sh
 
-choice=$(apropos . | dmenu -l 10)
+choice=$(man -k . | dmenu -l 10)
 [ -z $choice ] && exit 0 || echo $choice | awk '{print $1}' | xargs man -Tpdf | zathura -
