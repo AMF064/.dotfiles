@@ -18,4 +18,6 @@ ln -s /home/amf/.dotfiles/qutebrowser/config.py /home/amf/.config/qutebrowser/co
 ln -s /home/amf/.dotfiles/sxhkd/sxhkdrc /home/amf/.config/sxhkd/sxhkdrc
 ln -s /home/amf/.dotfiles/vifm/vifmrc /home/amf/.config/vifm/vifmrc
 ln -s /home/amf/.dotfiles/nvim/init.vim /home/amf/.config/nvim/init.vim
+ln -s /home/amf/.dotfiles/mpd/mpd.conf /home/amf/.config/mpd/mpd.conf
+ln -s /home/amf/.dotfiles/ncmpcpp/* /home/amf/.config/ncmpcpp/
 ln -s /home/amf/.dotfiles/wallpapers/* /home/amf/Pictures/wallpapers/
