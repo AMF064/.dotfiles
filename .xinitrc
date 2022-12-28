@@ -19,10 +19,12 @@ if [ -f $sysresources ]; then
 
 fi
 
+#Load .Xmodmap
 if [ -f $sysmodmap ]; then
     xmodmap $sysmodmap
 fi
 
+#Load .Xresources
 if [ -f "$userresources" ]; then
 
 

@@ -10,9 +10,9 @@ mkdir -p /home/amf/Downloads/browser
 ln -s /home/amf/.dotfiles/.xinitrc /home/amf/.xinitrc
 ln -s /home/amf/.dotfiles/.bashrc /home/amf/.bashrc
 
-sudo ln -s /home/amf/.dotfiles/Programs/manq /usr/local/bin/manq
-sudo ln -s /home/amf/.dotfiles/Programs/fileman /usr/local/bin/fileman
-sudo ln -s /home/amf/.dotfiles/Programs/wallpaper /usr/local/bin/wallpaper
+ln -s /home/amf/.dotfiles/Programs/manq /usr/local/bin/manq
+ln -s /home/amf/.dotfiles/Programs/fileman /usr/local/bin/fileman
+ln -s /home/amf/.dotfiles/Programs/wallpaper /usr/local/bin/wallpaper
 
 ln -s /home/amf/.dotfiles/qutebrowser/config.py /home/amf/.config/qutebrowser/config.py
 ln -s /home/amf/.dotfiles/sxhkd/sxhkdrc /home/amf/.config/sxhkd/sxhkdrc
