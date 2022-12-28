@@ -113,7 +113,7 @@ mark b ~/bin/
 mark h ~/
 mark p ~/Programs/
 mark B ~/Documents/TELECO
-mark d ~/Documents
+mark d ~/Downloads/browser
 
 " ------------------------------------------------------------------------------
 " Commands
