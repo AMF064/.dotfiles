@@ -3,6 +3,8 @@ vim.opt.relativenumber = true
 
 vim.opt.guicursor = ""
 
+--Autocompletion
+vim.opt.wildmode = longest, list, full
 --Tabs
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -29,3 +31,6 @@ vim.opt.scrolloff = 8
 
 --Update time
 vim.opt.updatetime = 50
+
+--System clipboard
+vim.opt.cb = "unnamedplus"
