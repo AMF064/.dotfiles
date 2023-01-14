@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+setxkbmap -option caps:swapescape
+
 alias ls='ls --color=auto'
 alias l='ls -lah'
 alias suck='rm -f config.h && sudo make clean install'
