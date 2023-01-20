@@ -7,6 +7,9 @@
 
 setxkbmap -option caps:swapescape
 
+#Vi mode
+set -o vi
+
 alias ls='ls --color=auto'
 alias l='ls -lah'
 alias suck='rm -f config.h && sudo make clean install'
