@@ -4,7 +4,9 @@ vim.opt.relativenumber = true
 vim.opt.guicursor = ""
 
 --Autocompletion
-vim.opt.wildmode = longest, list, full
+vim.opt.path:append { "**" }
+vim.opt.wildmenu = true
+vim.opt.wildmode = { "longest", "list", "full" }
 --Tabs
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
