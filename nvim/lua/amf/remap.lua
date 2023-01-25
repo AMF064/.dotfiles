@@ -8,3 +8,6 @@ vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)	--Previous buffer
 vim.keymap.set("n", "<M-d>", vim.cmd.bdelete)		--Delete buffer
 vim.keymap.set("n", "<M-t>", vim.cmd.terminal)		--Open terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")         --Exit terminal mode
+
+
+vim.keymap.set("i", "<C-c>", "<Esc>")         --Control-C acts as Escape

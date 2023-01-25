@@ -1,7 +1,9 @@
 !
 ! Swap Control and Caps Lock
 ! 
+remove Control = Control_L
 remove Lock = Caps_Lock
-keysym Escape = Caps_Lock
-keysym Caps_Lock = Escape
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
 add Lock = Caps_Lock
+add Control = Control_L
