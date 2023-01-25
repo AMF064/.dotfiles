@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-setxkbmap -option caps:swapescape
 
 #Vi mode
 set -o vi
