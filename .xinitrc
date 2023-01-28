@@ -14,9 +14,9 @@ fi
 setxkbmap gb &
 
 #Keymaps
-#string=$(xmodmap -pk | grep -E "^\s*(66|37)" | awk '{print $3}' | tr '\n' ' ')
-#[[ $string == "(Caps_Lock) (Control_L) " ]] && xmodmap $HOME/.Xmodmap &
-xmodmap $HOME/.Xmodmap &
+string=$(xmodmap -pk | grep -E "^\s*(66|37)" | awk '{print $3}' | tr '\n' ' ')
+[[ $string == "(Control_L) (Caps_Lock) " ]] && xmodmap $HOME/.Xmodmap &
+#xmodmap $HOME/.Xmodmap &
 
 $HOME/.fehbg &
 sxhkd &
