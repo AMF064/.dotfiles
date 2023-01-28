@@ -9,3 +9,5 @@ super + shift + {j, k}
     amixer sset Master 5%{-,+}
 super + shift + m
     st -e ncmpcpp
+super + e
+    st -e nvim
