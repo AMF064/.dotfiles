@@ -36,6 +36,3 @@ vim.opt.updatetime = 50
 
 --System clipboard
 vim.opt.cb:append { "unnamedplus" }
-
---Netrw
---vim.opt.netrw_banner = 0
