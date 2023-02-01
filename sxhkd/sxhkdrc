@@ -2,12 +2,12 @@
 super + Escape
 	"$XDG_CONFIG_HOME"/sxhkd/functions
 super + b
-    qutebrowser
+    $BROWSER
 super + shift + f
-    st -e vifm
+    st -e $FILEMAN
 super + shift + {j, k}
     amixer sset Master 5%{-,+}
 super + shift + m
     st -e ncmpcpp
 super + e
-    st -e nvim
+    st -e $EDITOR
