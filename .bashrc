@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+shopt -u autocd         #No need to write cd
+shopt -s histappend     #Append history, do not overwrite it
+
 
 alias ls='ls --color=auto'
 alias l='ls -lah'
