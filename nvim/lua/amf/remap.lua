@@ -28,3 +28,5 @@ vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting in the + register
 --Quickfix list remaps
 vim.keymap.set("n", "<C-k>", vim.cmd.cprev)         --Up in the quickfix list
 vim.keymap.set("n", "<C-j>", vim.cmd.cnext)         --Down in the quickfix list
+vim.keymap.set("n", "<leader>k", vim.cmd.lprev)         --Up in the quickfix list (local)
+vim.keymap.set("n", "<leader>j", vim.cmd.lnext)         --Down in the quickfix list (local)
