@@ -19,8 +19,12 @@ vim.keymap.set("n", "<M-t>", vim.cmd.terminal)		--Open terminal
 --Terminal remaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")         --Exit terminal mode
 
---Clipboard keymaps
+--Clipboard remaps
 vim.keymap.set("n", "<leader>y", "\"+y")         --Yanking in the + register
 vim.keymap.set("v", "<leader>y", "\"+y")         --Yanking in the + register
 vim.keymap.set("n", "<leader>Y", "\"+Y")         --Yanking in the + register
 vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting in the + register
+
+--Quickfix list remaps
+vim.keymap.set("n", "<C-k>", vim.cmd.cprev)         --Up in the quickfix list
+vim.keymap.set("n", "<C-j>", vim.cmd.cnext)         --Down in the quickfix list
