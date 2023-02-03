@@ -1,5 +1,7 @@
+--Basics
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.syntax = "on"
 
 vim.opt.guicursor = ""
 
@@ -12,10 +14,14 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
+--Indentation
 vim.opt.smartindent = true
-
+vim.opt.autoindent = true
+--No wrap
 vim.opt.wrap = false
+
+--Hidden buffers: for changing buffers without saving
+vim.opt.hidden = true
 
 --Swap files and undodirs
 vim.opt.backup = false
@@ -36,3 +42,6 @@ vim.opt.updatetime = 50
 
 --System clipboard
 vim.opt.cb:append { "unnamedplus" }
+
+--Statusline
+--vim.opt.statusline = "%F %m%r%h%w[%L] %y                                                                                                                                     [%{&ff}][%p%%][%04l,%04v]"
