@@ -145,9 +145,9 @@ c.editor.command = ["nvim" , "+{line}", "{file}"]
 
 #Fileselect commands
 c.fileselect.handler = "external"
-c.fileselect.folder.command = ["st", "-e", "vifm", "--choose-dir {}", "~", "~"]
-c.fileselect.multiple_files.command = ["st", "-e", "vifm", "--choose-files {}", "~", "~"]
-c.fileselect.single_file.command = ["st", "-e", "vifm", "--choose-files {}", "~", "~"]
+c.fileselect.folder.command = ["st", "-e", "vifm", "--choose-dir={}", "~", "~"]
+c.fileselect.multiple_files.command = ["st", "-e", "vifm", "--choose-files={}", "~", "~"]
+c.fileselect.single_file.command = ["st", "-e", "vifm", "--choose-files={}", "~", "~"]
 
 #Ad blocking
 c.content.blocking.method='both'
