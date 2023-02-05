@@ -40,8 +40,5 @@ vim.opt.scrolloff = 8
 --Update time
 vim.opt.updatetime = 50
 
---System clipboard
-vim.opt.cb:append { "unnamedplus" }
-
 --Statusline
 --vim.opt.statusline = "%F %m%r%h%w[%L] %y                                                                                                                                     [%{&ff}][%p%%][%04l,%04v]"
