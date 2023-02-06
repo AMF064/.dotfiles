@@ -4,10 +4,10 @@ super + Escape
 super + b
     $BROWSER
 super + shift + f
-    st -e $FILEMAN
+	$TERMINAL -e $FILEMAN
 super + shift + {j, k}
     amixer sset Master 5%{-,+}
 super + shift + m
-    st -e ncmpcpp
+	$TERMINAL -e ncmpcpp
 super + e
-    st -e $EDITOR
+	$TERMINAL -e $EDITOR
