@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 --Insert mode remaps
 vim.keymap.set("i", "<C-c>", "<Esc>")         --Control-C acts as Escape
 
+--File navigation
+vim.keymap.set("n", "<leader>cd", vim.cmd('cd %:p:h'))  --Change current directory to the current file's one
+
 --Netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)	--Open netrw
 
@@ -26,6 +29,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")         --Yanking in the + register
 vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting in the + register
 
 --Quickfix list remaps
+vim.keymap.set("n", "<leader>o", vim.cmd.copen)
 vim.keymap.set("n", "<C-k>", vim.cmd.cprev)         --Up in the quickfix list
 vim.keymap.set("n", "<C-j>", vim.cmd.cnext)         --Down in the quickfix list
 vim.keymap.set("n", "<leader>k", vim.cmd.lprev)         --Up in the quickfix list (local)
