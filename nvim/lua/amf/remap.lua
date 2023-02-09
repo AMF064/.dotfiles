@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("i", "<C-c>", "<Esc>")         --Control-C acts as Escape
 
 --File navigation
-vim.keymap.set("n", "<leader>cd", vim.cmd('cd %:p:h'))  --Change current directory to the current file's one
+vim.keymap.set("n", "<leader>cd", "<cmd>chdir %:p:h<CR>")  --Change current directory to the current file's one
 
 --Netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)	--Open netrw
