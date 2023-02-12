@@ -29,8 +29,12 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")         --Yanking in the + register
 vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting in the + register
 
 --Quickfix list remaps
-vim.keymap.set("n", "<leader>o", vim.cmd.copen)
+vim.keymap.set("n", "<leader>o", vim.cmd.copen)     --Open the quickix list
 vim.keymap.set("n", "<C-k>", vim.cmd.cprev)         --Up in the quickfix list
 vim.keymap.set("n", "<C-j>", vim.cmd.cnext)         --Down in the quickfix list
+vim.keymap.set("n", "<leader>O", vim.cmd.lopen)     --Open the local window quickfix list
 vim.keymap.set("n", "<leader>k", vim.cmd.lprev)         --Up in the quickfix list (local)
 vim.keymap.set("n", "<leader>j", vim.cmd.lnext)         --Down in the quickfix list (local)
+
+--Bash scripts
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>")    --Chmod the bash file
