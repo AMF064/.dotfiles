@@ -10,7 +10,7 @@ shopt -s histappend     #Append history, do not overwrite it
 
 alias ls='ls --color=auto'
 alias l='ls -lah'
-alias grep='grep --color-auto'
+alias grep='grep --color=auto'
 alias suck='rm -f config.h && sudo make clean install'
 alias rmcache='rm -vr ~/.cache'
 alias rmhist='rm -vr ~/.local/share/qutebrowser'
