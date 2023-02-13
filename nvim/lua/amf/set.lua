@@ -45,5 +45,3 @@ vim.cmd('let g:netrw_banner = 0')
 
 --Statusline
 --vim.opt.statusline = "%F %m%r%h%w[%L] %y                                                                                                                                     [%{&ff}][%p%%][%04l,%04v]"
-
-vim.opt.rtp:append { "/home/amf/.local/share/autoload" }
