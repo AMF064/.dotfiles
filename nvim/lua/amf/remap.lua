@@ -17,10 +17,11 @@ vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)	--Next buffer
 vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)	--Previous buffer
 vim.keymap.set("n", "<leader>q", vim.cmd.bunload)	     --Previous buffer you visited
 vim.keymap.set("n", "<M-d>", vim.cmd.bdelete)		--Delete buffer
-vim.keymap.set("n", "<M-t>", vim.cmd.terminal)		--Open terminal
 
 --Terminal remaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")         --Exit terminal mode
+vim.keymap.set("n", "<M-t>", "<C-w>v<C-w>l<cmd>terminal<CR>")		--Open terminal in vertically split window
+vim.keymap.set("n", "<M-T>", "<C-w>s<C-w>j<cmd>terminal<CR>")		--Open terminal in horizontally split window
 
 --Clipboard remaps
 vim.keymap.set("n", "<leader>y", "\"+y")         --Yanking in the + register
