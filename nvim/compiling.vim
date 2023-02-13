@@ -5,7 +5,7 @@ augroup set_makeprg
     au BufWritePre *.sh setlocal makeprg=%
     au BufWritePre *.lisp setlocal makeprg=clisp\ %
     au BufWritePre *.py setlocal makeprg=python\ %
-    au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/lib/\ %\ &&\ java\ -classpath\ %:p:h:h/lib/\ %
+    au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/bin/\ %\ &&\ java\ -classpath\ %:p:h:h/bin/\ %
 augroup end
 
 "Setting omnifunc variable
