@@ -11,3 +11,5 @@ super + shift + m
 	$TERMINAL -e ncmpcpp
 super + e
 	$TERMINAL -e $EDITOR
+super + F11
+    $TERMINAL -c "Floating" -g 60x20+600+220 -e /home/amf/Programs/Bash/wificonnect.sh
