@@ -1,5 +1,5 @@
 # Reload functions
-super + Escape
+alt + Escape
 	"$XDG_CONFIG_HOME"/sxhkd/functions
 super + b
     $BROWSER
@@ -12,4 +12,4 @@ super + shift + m
 super + e
 	$TERMINAL -e $EDITOR
 super + F11
-    $TERMINAL -c "Floating" -g 60x20+600+220 -e /home/amf/Programs/Bash/wificonnect.sh
+    $TERMINAL -c "Floating" -g 60x20+480+280 -e /home/amf/Programs/Bash/wificonnect.sh
