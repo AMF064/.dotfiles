@@ -3,7 +3,7 @@ augroup set_makeprg
     au!
     au BufWritePre *.c setlocal makeprg=gcc\ -Wall\ -Wextra\ -o\ %<.o\ %
     au BufWritePre *.sh setlocal makeprg=%
-    au BufWritePre *.lisp setlocal makeprg=clisp\ %
+    au BufWritePre *.lisp setlocal makeprg=sbcl\ %
     au BufWritePre *.py setlocal makeprg=python\ %
     au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/bin/\ %
 augroup end
