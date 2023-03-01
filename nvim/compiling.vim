@@ -3,9 +3,10 @@ augroup set_makeprg
     au!
     au BufWritePre *.c setlocal makeprg=gcc\ -Wall\ -Wextra\ -o\ %<.o\ %
     au BufWritePre *.sh setlocal makeprg=%
-    au BufWritePre *.lisp setlocal makeprg=sbcl\ %
+    au BufWritePre *.lisp setlocal makeprg=sbcl\ --script\ %
     au BufWritePre *.py setlocal makeprg=python\ %
     au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/bin/\ %
+    au BufWritePre *.ms setlocal makeprg=groff\ -ms\ -D\ utf8\ -Tpdf\ %\ >\ %<.pdf
 augroup end
 
 "Setting omnifunc variable
