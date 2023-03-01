@@ -97,6 +97,7 @@ set scrolloff=8
 
 " Don't do too many requests to slow file systems
 if !has('win')
+mark b ~/bin/
     set slowfs=curlftpfs
 endif
 
@@ -110,10 +111,9 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 " :mark mark /full/directory/path [filename]
 
 mark r /
-mark b ~/bin/
 mark h ~/
 mark p ~/Programs/
-mark B ~/Documents/
+mark b ~/Documents/
 mark d ~/Downloads/browser
 
 " ------------------------------------------------------------------------------
@@ -503,9 +503,9 @@ nnoremap <f8> :delete<cr>
 
 " Midnight commander alike mappings
 " Open current directory in the other pane
-nnoremap <a-i> :sync<cr>
+nnoremap <m-i> :sync<cr>
 " Open directory under cursor in the other pane
-nnoremap <a-o> :sync %c<cr>
+nnoremap <m-o> :sync %c<cr>
 " Swap panes
 nnoremap <c-u> <c-w>x
 
