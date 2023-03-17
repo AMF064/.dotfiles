@@ -4,6 +4,7 @@ vim.opt.relativenumber = true
 vim.opt.syntax = "on"
 
 vim.opt.guicursor = ""
+vim.opt.cursorline = true
 
 --Autocompletion
 vim.opt.path:append { "**" }
