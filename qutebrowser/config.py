@@ -175,6 +175,14 @@ config.bind('<p><t>', 'tab-pin')
 config.bind('<Shift-j>', 'tab-prev')
 config.bind('<Shift-k>', 'tab-next')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
+config.bind('<Ctrl-a>', 'fake-key <Home>', 'insert')
+config.bind('<Ctrl-e>', 'fake-key <End>', 'insert')
+config.bind('<Ctrl-b>', 'fake-key <Left>', 'insert')
+config.bind('<Ctrl-f>', 'fake-key <Right>', 'insert')
+config.bind('<Alt-f>', 'fake-key <Ctrl-Right>', 'insert')
+config.bind('<Alt-b>', 'fake-key <Ctrl-Left>', 'insert')
+config.bind('<Alt-d>', 'fake-key <Ctrl-Delete>', 'insert')
+config.bind('<Ctrl-d>', 'fake-key <Delete>', 'insert')
 
 #No content autoplay and do not show PDFs in the browser
 c.content.autoplay = False
