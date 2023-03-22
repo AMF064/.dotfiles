@@ -104,6 +104,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/amf/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vlime = {
+    loaded = true,
+    path = "/home/amf/.local/share/nvim/site/pack/packer/start/vlime",
+    url = "https://github.com/vlime/vlime"
   }
 }
 
