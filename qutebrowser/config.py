@@ -172,7 +172,6 @@ c.content.blocking.adblock.lists = [
 
 ##Keybindings
 config.bind('<p><t>', 'tab-pin')
-config.bind('<y><o>', 'yank inline {title} || {url}')
 config.bind('<Shift-j>', 'tab-prev')
 config.bind('<Shift-k>', 'tab-next')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
