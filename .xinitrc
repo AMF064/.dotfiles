@@ -15,7 +15,7 @@ setxkbmap gb &
 
 #Keymaps
 string=$(xmodmap -pk | grep -E "^\s*(66|37)" | awk '{print $3}' | tr '\n' ' ')
-[[ $string == "(Control_L) (Caps_Lock) " ]] && xmodmap $HOME/.Xmodmap &
+[[ $string == "(Control_L) (Caps_Lock) " ]] && xmodmap $HOME/.Xmodmap &         #Verify the order
 #xmodmap $HOME/.Xmodmap &
 
 $HOME/.fehbg &
@@ -36,6 +36,6 @@ status() { \
 while [ true ]
 do
     xsetroot -name "$(status | tr '\n' ' ')"
-	sleep 1m
+    sleep 1m
 done &
 exec dwm
