@@ -12,5 +12,5 @@ sudo master_install.sh && master_links.sh
 ```
 
 ## Activate Neovim plugins
-Neovim plugins have to be reactivated when installing the dotfiles. For that, clone the (packer.nvim)[https://github.com/wbthomason/packer.nvim] repository.
+Neovim plugins have to be reactivated when installing the dotfiles. For that, clone the (packer.nvim)(https://github.com/wbthomason/packer.nvim) repository.
 Then open Neovim, give a shoutout to the file ~/.config/nvim/lua/amf/packer.lua and run :PackerSync.
