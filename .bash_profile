@@ -7,6 +7,7 @@ export FILEMAN="vifm"
 export EDITOR="nvim"
 export BROWSER="qutebrowser"
 export READER="zathura"
+export PATH="$PATH:/home/amf/.local/bin/"
 export PATH="$PATH:$JAVA_HOME/bin/"
 export CLASSPATH="$JAVA_HOME/lib/"
 
