@@ -25,9 +25,9 @@ vim.keymap.set("n", "<M-T>", "<C-w>s<C-w>j<cmd>terminal<CR>")		--Open terminal i
 
 --Clipboard remaps
 vim.keymap.set("n", "<leader>y", "\"+y")         --Yanking in the + register
-vim.keymap.set("v", "<leader>y", "\"+y")         --Yanking in the + register
-vim.keymap.set("n", "<leader>Y", "\"+Y")         --Yanking in the + register
-vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting in the + register
+vim.keymap.set("v", "<leader>y", "\"+y")         --Yanking in the + register (visual mode)
+vim.keymap.set("n", "<leader>Y", "\"+Y")         --Yanking line in the + register
+vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting from the + register
 
 --Quickfix list remaps
 vim.keymap.set("n", "<leader>o", vim.cmd.copen)     --Open the quickix list
@@ -37,5 +37,5 @@ vim.keymap.set("n", "<leader>O", vim.cmd.lopen)     --Open the local window quic
 vim.keymap.set("n", "<leader>k", vim.cmd.lprev)         --Up in the quickfix list (local)
 vim.keymap.set("n", "<leader>j", vim.cmd.lnext)         --Down in the quickfix list (local)
 
---Bash scripts
+--Scripts
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>")    --Chmod the bash file
