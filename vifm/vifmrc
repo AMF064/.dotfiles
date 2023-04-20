@@ -414,6 +414,9 @@ filextype */
 " Sample keyboard mappings
 " ------------------------------------------------------------------------------
 
+"Exit puting everything in $HOME
+nnoremap QQ <Tab>'hgg<Tab>'hggZZ
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
