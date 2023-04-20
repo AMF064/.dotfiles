@@ -1,7 +1,7 @@
 "Compiler used with the :make command
 augroup set_makeprg
     au!
-    au BufWritePre *.c setlocal makeprg=gcc\ -Wall\ -Wextra\ -o\ %<.o\ %
+    au BufWritePre *.c setlocal makeprg=gcc\ -Wall\ -Wextra\ -Wpedantic\ -std=c11\ -o\ %<.o\ %
     au BufWritePre *.sh setlocal makeprg=%          "Scripting language
     au BufWritePre *.lisp setlocal makeprg=sbcl\ --script\ %        "Unused. Scripting language, but we are using Vlime.
     au BufWritePre *.py setlocal makeprg=%          "Scripting language
