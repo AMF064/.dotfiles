@@ -7,7 +7,6 @@ augroup set_makeprg
     au BufWritePre *.py setlocal makeprg=%          "Scripting language
     au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/bin/\ %
     au BufWritePre *.ms setlocal makeprg=groff\ -ms\ -R\ -D\ utf8\ -Tpdf\ %\ >\ %<.pdf
-    au BufWritePre *.bib setlocal makeprg=hispanize\ %\ >\ %<_hisp.bib
 augroup end
 
 "Setting omnifunc variable
