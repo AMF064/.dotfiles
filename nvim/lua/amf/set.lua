@@ -44,5 +44,14 @@ vim.opt.updatetime = 50
 --Netrw
 vim.cmd('let g:netrw_banner = 0')
 
+--Slimv
+--vim.cmd("let g:slimv_lisp = 'usr/bin/sbcl'")
+--vim.cmd("let g:slimv_lisp_impl = 'sbcl'")
+--vim.cmd("let g:slimv_swank_cmd = '! st -c \"Floating\" -g 60x20+480+280 -e sbcl --load /home/amf/.local/share/nvim/site/pack/packer/start/slimv/slime/start-swank.lisp &'")
+--vim.cmd("let g:swank_block_size = 65536")
+--vim.cmd("let g:slimv_leader = '\\'")
+--vim.cmd("let g:slimv_repl_split = 4")
+--vim.cmd("let g:slimv_repl_split_size = 80")
+
 --Statusline
 --vim.opt.statusline = "%F %m%r%h%w[%L] %y                                                                                                                                     [%{&ff}][%p%%][%04l,%04v]"
