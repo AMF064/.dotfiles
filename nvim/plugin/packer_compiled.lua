@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/amf/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  slimv = {
+    loaded = true,
+    path = "/home/amf/.local/share/nvim/site/pack/packer/start/slimv",
+    url = "https://github.com/kovisoft/slimv"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/amf/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -104,11 +109,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/amf/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  vlime = {
-    loaded = true,
-    path = "/home/amf/.local/share/nvim/site/pack/packer/start/vlime",
-    url = "https://github.com/vlime/vlime"
   }
 }
 
