@@ -6,7 +6,7 @@ augroup set_makeprg
     au BufWritePre *.lisp setlocal makeprg=sbcl\ --script\ %        "Unused. Scripting language, but we are using Vlime.
     au BufWritePre *.py setlocal makeprg=%          "Scripting language
     au BufWritePre *.java setlocal makeprg=javac\ -classpath\ %:p:h\ -d\ %:p:h:h/bin/\ %
-    au BufWritePre *.ms setlocal makeprg=groff\ -ms\ -R\ -D\ utf8\ -Tpdf\ %\ >\ %<.pdf
+    au BufWritePre *.ms setlocal makeprg=groff\ -ms\ -e\ -R\ -D\ utf8\ -Tpdf\ %\ >\ %<.pdf
 augroup end
 
 "Setting omnifunc variable
