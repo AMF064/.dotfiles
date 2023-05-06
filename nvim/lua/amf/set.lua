@@ -47,11 +47,13 @@ vim.cmd('let g:netrw_banner = 0')
 --Slimv
 vim.cmd("let g:slimv_lisp = 'usr/bin/sbcl'")
 vim.cmd("let g:slimv_lisp_impl = 'sbcl'")
+vim.cmd("let g:slimv_preferred = 'mit'")            --For Scheme
 vim.cmd("let g:slimv_swank_cmd = '! st -c \"Floating\" -g 60x20+480+280 -e sbcl --load /home/amf/.local/share/nvim/site/pack/packer/start/slimv/slime/start-swank.lisp &'")
 vim.cmd("let g:swank_block_size = 65536")
-vim.cmd("let g:slimv_leader = '\\'")
-vim.cmd("let g:slimv_repl_split = 4")
-vim.cmd("let g:slimv_repl_split_size = 80")
+vim.cmd("let g:slimv_leader = '\\'")                --Leader key is \
+vim.cmd("let g:slimv_repl_split = 4")               --Vertical split for REPL
+vim.cmd("let g:slimv_repl_split_size = 80")         --REPL split size
+vim.cmd("let g:paredit_electric_return = 0")        --Disable paredit electric return (annoying)
 vim.cmd("let g:slimv_disable_scheme = 0")
 
 --Statusline
