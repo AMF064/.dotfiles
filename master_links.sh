@@ -12,8 +12,10 @@ ln -s /home/amf/.dotfiles/.bashrc /home/amf/.bashrc
 ln -s /home/amf/.dotfiles/.bash_profile /home/amf/.bash_profile
 ln -s /home/amf/.dotfiles/.Xmodmap /home/amf/.Xmodmap
 
-sudo ln -s /home/amf/.dotfiles/Programs/manq /usr/local/bin/manq
-sudo ln -s /home/amf/.dotfiles/Programs/wallpaper /usr/local/bin/wallpaper
+ln -s /home/amf/.dotfiles/Programs/manq /home/amf/.local/bin/manq
+ln -s /home/amf/.dotfiles/Programs/wallpaper /home/amf/.local/bin/wallpaper
+ln -s /home/amf/.dotfiles/Programs/hispanize /home/amf/.local/bin/hispanize
+ln -s /home/amf/.dotfiles/Programs/wificonnect /home/amf/.local/bin/wificonnect
 
 ln -s /home/amf/.dotfiles/qutebrowser/config.py /home/amf/.config/qutebrowser/config.py
 ln -s /home/amf/.dotfiles/sxhkd/sxhkdrc /home/amf/.config/sxhkd/sxhkdrc
