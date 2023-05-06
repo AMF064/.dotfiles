@@ -13,7 +13,6 @@ ln -s /home/amf/.dotfiles/.bash_profile /home/amf/.bash_profile
 ln -s /home/amf/.dotfiles/.Xmodmap /home/amf/.Xmodmap
 
 sudo ln -s /home/amf/.dotfiles/Programs/manq /usr/local/bin/manq
-sudo ln -s /home/amf/.dotfiles/Programs/fileman /usr/local/bin/fileman
 sudo ln -s /home/amf/.dotfiles/Programs/wallpaper /usr/local/bin/wallpaper
 
 ln -s /home/amf/.dotfiles/qutebrowser/config.py /home/amf/.config/qutebrowser/config.py
