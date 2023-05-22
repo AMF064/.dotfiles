@@ -10,6 +10,8 @@ git clone https://www.github.com/AMF064/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 sudo master_install.sh && master_links.sh
 ```
+## Install Quicklisp first for Slimv
+Install Quicklisp from SBCL.
 
 ## Activate Neovim plugins
 Neovim plugins have to be reactivated when installing the dotfiles. For that, clone the [packer.nvim](https://github.com/wbthomason/packer.nvim) repository.
