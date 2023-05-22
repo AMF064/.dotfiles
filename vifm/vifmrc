@@ -415,7 +415,8 @@ filextype */
 " ------------------------------------------------------------------------------
 
 "Exit puting everything in $HOME
-nnoremap QQ <Tab>'hgg<Tab>'hggZZ
+nnoremap QQ 'hgg<Tab>'hgg<C-w>hZZ
+nnoremap HH <Tab>'hgg<Tab>'hgg
 
 " Start shell in current directory
 nnoremap s :shell<cr>
