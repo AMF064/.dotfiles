@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 choice=$(nmcli device wifi list --rescan yes | sed -n '1!p' | cut -b 9- | dmenu -l 10 | awk '{print $2}')
-[ -z "$choice" ] && exit 0 || [ "$choice" = "eduroam" ] && name=$(echo | dmenu -p "Username:")
 [ -z "$choice" ] && exit 0 || passwd=$(systemd-ask-password)
-[ -z "$choice" ] && exit 0 || [ -n "$passwd" ] && [ -n "$name" ] && sudo nmcli -a device wifi connect "$choice" name "$name" password "$passwd" ||
+[ -z "$choice" ] && exit 0 || [ -n "$passwd" ] && [ "$choice" == "eduroam" ] && sudo nmcli -a device wifi connect "$choice" ||
     sudo nmcli -a device wifi connect "$choice" password "$passwd"; sleep 3s
