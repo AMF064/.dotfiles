@@ -28,7 +28,7 @@ xset r rate 300 50
 #Variables for setting the statusbar
 status() { \
     #Volume
-    echo "V:" && amixer sget Master | grep "%" | awk '{print $4}' | cut -b 2-4 && echo "|"
+    echo "V:" && amixer sget Master | grep "%" | awk '{print $4}' | sed "s/\[//g;s/\]//g" && echo "|"
     #Battery
     echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
     #Date
