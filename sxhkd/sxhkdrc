@@ -5,8 +5,6 @@ super + b
     $BROWSER
 super + shift + f
 	$TERMINAL -e $FILEMAN
-super + shift + {j, k}
-    amixer sset Master 5%{-,+}
 super + shift + m
 	$TERMINAL -e ncmpcpp
 super + e
