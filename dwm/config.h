@@ -1,8 +1,9 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gaps between windows */
+static const unsigned int gappx     = 4;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -49,6 +50,80 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 };
 
+/* Custom functions*/
+//Helper function
+void
+append(Client *c){
+    Client *l;
+    for (l = c->mon->clients; l && l->next; l = l->next);
+    if (l) {
+        l->next = c;
+        c->next = NULL;
+    }
+}
+
+//Helper function
+void
+enqueuestack(Client *c){
+    Client *l;
+    for (l = c->mon->stack; l && l->snext; l = l->snext);
+    if (l) {
+        l->snext = c;
+        c->snext = NULL;
+    }
+}
+
+/* Rotate the clients */
+//TODO: maintain the former selection with the counterclockwise version
+//TODO: do nothing in monocle layout
+void
+rotate(const Arg *arg){
+    Client *c = NULL, *f;
+	if (!selmon->sel)
+		return;
+    f = selmon->sel;
+    if(arg->i > 0){
+        for(c = nexttiled(selmon->clients); c && nexttiled(c->next); c = nexttiled(c->next));
+        if(c){
+            detach(c);
+            attach(c);
+            detachstack(c);
+            attachstack(c);
+            for(f = nexttiled(selmon->clients);
+                f && nexttiled(f->next) != nexttiled(selmon->sel);
+                f = nexttiled(f->next));      //Keep the former selection
+        }
+    } else if((c = nexttiled(selmon->clients))){
+        detach(c);
+        append(c);
+        detachstack(c);
+        enqueuestack(c);
+    }
+    if(c){
+        focus(f);           //Do not change the focus
+        arrange(selmon);
+        restack(selmon);
+    }
+}
+
+/* Spawn a command and refresh the bar */
+void
+spawn_refbar(const Arg *arg){
+    spawn(arg);
+    char *const cmd[] = {"pkill", "sleep", NULL};
+    Arg a = {.v = cmd};
+    spawn(&a);
+    //if(fork() == 0){
+        //if(dpy)
+            //close(ConnectionNumber(dpy));
+        //setsid();
+        //execvp(cmd[0], cmd);
+        //die("dwm: execvp '%s' failed:", cmd[0]);
+    //}
+}
+
+/* End of custom functions*/
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -64,6 +139,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *upvol[] = { "amixer", "sset", "Master", "5%+", NULL };
+static const char *downvol[] = { "amixer", "sset", "Master", "5%-", NULL };
+
+// for muting/unmuting //
+static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key         function        argument */
@@ -74,6 +154,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_k,       focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,       incnmaster,     {.i = -1 } },
+    { MODKEY|ControlMask,           XK_n,       rotate,         {.i = +1 } },
+    { MODKEY|ControlMask,           XK_p,       rotate,         {.i = -1 } },
 	{ MODKEY,                       XK_h,       setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,       setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return,  zoom,           {0} },
@@ -93,6 +175,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,       setgaps,        {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_p,       setgaps,        {.i = +1 } },
 	{ MODKEY,                       XK_equal,   setgaps,        {.i = 0  } },
+    { 0,              XF86XK_AudioRaiseVolume,  spawn_refbar,   {.v = upvol } },
+    { 0,              XF86XK_AudioLowerVolume,  spawn_refbar,   {.v = downvol } },
+    { 0,              XF86XK_AudioMute,         spawn_refbar,   {.v = mute } },
 	TAGKEYS(                        XK_1,                       0)
 	TAGKEYS(                        XK_2,                       1)
 	TAGKEYS(                        XK_3,                       2)
@@ -121,4 +206,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
