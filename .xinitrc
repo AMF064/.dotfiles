@@ -15,7 +15,7 @@ setxkbmap gb &
 
 #Keymaps
 string=$(xmodmap -pk | grep -E "^\s*(66|37)" | awk '{print $3}' | tr '\n' ' ')
-[[ $string == "(Control_L) (Caps_Lock) " ]] && xmodmap $HOME/.Xmodmap &         #Verify the order
+[ "$string" = "(Control_L) (Caps_Lock) " ] && xmodmap $HOME/.Xmodmap &         #Verify the order
 #xmodmap $HOME/.Xmodmap &
 
 $HOME/.fehbg &
@@ -24,8 +24,11 @@ sxhkd &
 #Key repeat delay, key repeat rate
 xset r rate 300 50
 
+
 #Variables for setting the statusbar
 status() { \
+    #Volume
+    echo "V:" && amixer sget Master | grep "%" | awk '{print $4}' | cut -b 2-4 && echo "|"
     #Battery
     echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
     #Date
