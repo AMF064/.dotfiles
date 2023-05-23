@@ -6,7 +6,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")         --Control-C acts as Escape
 --Visual mode remaps
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")        --Move selected lines down
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")        --Move selected lines up
-vim.keymap.set("v", "<C-l>", ":'<, '>norm I//<CR>")       --Comment selected lines
+vim.keymap.set("v", "<C-m>", ":'<,'>norm I//<CR>")       --Comment selected lines
 
 --File navigation
 vim.keymap.set("n", "<leader>cd", "<cmd>chdir %:p:h<CR>")  --Change current directory to the current file's one
