@@ -27,6 +27,8 @@ xset r rate 300 50
 
 #Variables for setting the statusbar
 status() { \
+    #IP address
+    ip -4 addr show wlp3s0 | grep inet | awk '{print $2}' | sed 's/\/.*//g' && echo "|"
     #Volume
     echo "V:" && amixer sget Master | grep "%" | awk '{print $4}' | sed "s/\[//g;s/\]//g" && echo "|"
     #Battery
