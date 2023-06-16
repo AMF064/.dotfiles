@@ -51,75 +51,13 @@ static const Layout layouts[] = {
 };
 
 /* Custom functions*/
-//Helper function
-void
-append(Client *c){
-    Client *l;
-    for (l = c->mon->clients; l && l->next; l = l->next);
-    if (l) {
-        l->next = c;
-        c->next = NULL;
-    }
-}
-
-//Helper function
-void
-enqueuestack(Client *c){
-    Client *l;
-    for (l = c->mon->stack; l && l->snext; l = l->snext);
-    if (l) {
-        l->snext = c;
-        c->snext = NULL;
-    }
-}
-
-/* Rotate the clients */
-//TODO: maintain the former selection with the counterclockwise version
-//TODO: do nothing in monocle layout
-void
-rotate(const Arg *arg){
-    Client *c = NULL, *f;
-	if (!selmon->sel)
-		return;
-    f = selmon->sel;
-    if(arg->i > 0){
-        for(c = nexttiled(selmon->clients); c && nexttiled(c->next); c = nexttiled(c->next));
-        if(c){
-            detach(c);
-            attach(c);
-            detachstack(c);
-            attachstack(c);
-            for(f = nexttiled(selmon->clients);
-                f && nexttiled(f->next) != nexttiled(selmon->sel);
-                f = nexttiled(f->next));      //Keep the former selection
-        }
-    } else if((c = nexttiled(selmon->clients))){
-        detach(c);
-        append(c);
-        detachstack(c);
-        enqueuestack(c);
-    }
-    if(c){
-        focus(f);           //Do not change the focus
-        arrange(selmon);
-        restack(selmon);
-    }
-}
-
-/* Spawn a command and refresh the bar */
+/* Spawn a command and refresh the statusbar */
 void
 spawn_refbar(const Arg *arg){
     spawn(arg);
     char *const cmd[] = {"pkill", "sleep", NULL};
     Arg a = {.v = cmd};
     spawn(&a);
-    //if(fork() == 0){
-        //if(dpy)
-            //close(ConnectionNumber(dpy));
-        //setsid();
-        //execvp(cmd[0], cmd);
-        //die("dwm: execvp '%s' failed:", cmd[0]);
-    //}
 }
 
 /* End of custom functions*/
@@ -154,8 +92,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_k,       focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,       incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,       incnmaster,     {.i = -1 } },
-    { MODKEY|ControlMask,           XK_n,       rotate,         {.i = +1 } },
-    { MODKEY|ControlMask,           XK_p,       rotate,         {.i = -1 } },
 	{ MODKEY,                       XK_h,       setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,       setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return,  zoom,           {0} },

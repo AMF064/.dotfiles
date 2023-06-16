@@ -123,6 +123,9 @@ config.set('content.images', True)
 # Type: Bool
 config.set('content.javascript.enabled', True)
 
+#Accept cookies from SearXNG
+config.set('content.cookies.accept', 'all', 'searxng.nicfab.eu/*')
+
 # Background color of the completion widget for even rows.
 # Type: QssColor
 c.colors.completion.even.bg = '#333333'
@@ -185,7 +188,14 @@ bind_chained('<;><t>', 'config-cycle content.proxy socks5://localhost:9050 syste
 
 ##Change statusbar colors depending on the current toggled settings
 #c.colors.statusbar.command.private.bg = 
-proxy = config.get('content.proxy')
+#proxy = config.get('content.proxy')
+
+#Default search engine, default page, start page:
+c.url.searchengines = {'DEFAULT':'https://searxng.nicfab.eu/searxng/search?q={}'}
+c.url.default_page = "https://searxng.nicfab.eu/"
+c.url.start_pages = "https://searxng.nicfab.eu/"
+
+#{"DEFAULT": "https://duckduckgo.com/?q={}"}
 
 #Emacs keybindings for insert mode
 config.bind('<Ctrl-a>', 'fake-key <Home>', 'insert')
@@ -217,5 +227,5 @@ c.hints.chars = "asdfjkl;"
 #Remove finished downloads
 c.downloads.remove_finished = 5
 
-#No cookies, please
-c.content.cookies.store = False
+#Store cookies for the SearX preferences
+c.content.cookies.store = True
