@@ -8,15 +8,14 @@ vim.keymap.set("n", "~", "<cmd>set lz<CR>ddkP<cmd>set nolz<CR>")                
 vim.keymap.set("n", "<leader>\"", "viw<esc>a\"<esc>bi\"<esc>lel")
 vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>bi'<esc>lel")
 vim.keymap.set("n", "<leader>u", "mzviw~`z")                                                --Change case of a word
-vim.keymap.set("n", "<leader>U", "mzbv~`z")                                                 --Capitalize the first letter
-vim.keymap.set("n", "<leader>ev", ":vsplit ~/.dotfiles/nvim/lua/amf/remap.lua<CR>")
+vim.keymap.set("n", "<leader>U", "mzviw~lve~`z")                                            --Capitalize the first letter
 --}}}1
 
 --Insert mode remaps {{{1
 vim.keymap.set("i", "<C-c>", "<nop>")                   --Disable C-c
 vim.keymap.set("i", "<C-BS>", "<C-w>")                  --Delete words with Control-Backspace
 vim.keymap.set("i", "<C-u>", "<esc>mzviw~`za")          --Capitalize  word
-vim.keymap.set("i", "<M-u>", "<esc>mzbv~`za")           --Capitalize the first letter
+vim.keymap.set("i", "<M-u>", "<esc>mzviw~lve~`za")      --Capitalize the first letter
 --}}}1
 
 --Visual mode remaps {{{1
@@ -46,7 +45,7 @@ vim.keymap.set("c", "<C-d>", "<delete>")
 --}}}1
 
 --File navigation {{{1
-vim.keymap.set("n", "<leader>cd", "<cmd>chdir %:p:h<CR>")   --Change current directory to the current file's one
+vim.keymap.set("n", "<leader>cd", "<cmd>lchdir %:p:h<CR>")   --Change current directory to the current file's one
 --}}}1
 
 --Netrw {{{1
@@ -60,7 +59,7 @@ vim.keymap.set("n", "<leader>ba", vim.cmd('badd .'))        --Add buffer
 vim.keymap.set("n", "<leader>bn", vim.cmd.bnext)            --Next buffer
 vim.keymap.set("n", "<leader>bp", vim.cmd.bprevious)        --Previous buffer
 vim.keymap.set("n", "<leader>q", vim.cmd.bunload)           --Previous buffer you visited
-vim.keymap.set("n", "<M-d>", vim.cmd.bdelete)               --Delete buffer
+vim.keymap.set("n", "<leader>d", vim.cmd.bdelete)               --Delete buffer
 --}}}1
 
 --Terminal remaps {{{1
@@ -87,4 +86,10 @@ vim.keymap.set("n", "<leader>j", vim.cmd.lnext)         --Down in the quickfix l
 
 --Scripts {{{1
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>")    --Chmod the bash file
+--}}}1
+
+--Abbreviations{{{1
+vim.cmd [[
+cabbrev hg helpgrep
+]]
 --}}}1
