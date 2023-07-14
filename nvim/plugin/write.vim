@@ -1,8 +1,14 @@
+function! s:indent_file()
+    let l:view = winsaveview()
+    silent! execute 'silent! normal! gg=G'
+    call winrestview(l:view)
+endfunction
+
 " Do these to things before writing to file
 augroup please_be_nice
     au!
     " Indent
-    autocmd BufWritePre * silent normal mzgg=G`z
+    autocmd BufWritePre * silent normal =gg']=G
     " Remove trailing whitespace
     autocmd BufWritePre * :%s/\s\+$//e
 augroup end
