@@ -19,6 +19,7 @@ alias rmhist='rm -vr ~/.local/share/qutebrowser/{cmd-history,history*,sessions} 
 alias rmtrash='rm -vr ~/.local/share/vifm/Trash/'
 alias poweroff='systemctl poweroff'
 alias v='nvim'
+alias e='vim'
 alias java='java -classpath ./../bin/'
 PS1='┌[\e[1;32m\u\e[0m@\e[1;36m\h\e[0m \W]\n└\$ '
 PS2='> '
