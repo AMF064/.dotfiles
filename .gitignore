@@ -5,3 +5,4 @@ nvim/plugin/packer_compiled.lua
 dwm/dwm
 dwm/config.h
 slock/slock
+slock/config.h
