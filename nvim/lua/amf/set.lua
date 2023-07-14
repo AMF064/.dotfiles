@@ -56,20 +56,6 @@ vim.opt.list = true
 vim.o.listchars = 'tab:> ,trail:·'
 --}}}
 
---Slimv {{{1
-vim.g.slimv_lisp = 'usr/bin/sbcl'
-vim.g.slimv_lisp_impl = 'sbcl'
-vim.g.slimv_preferred = 'mit'            --For Scheme
-vim.g.slimv_swank_cmd = '! st -c \"Floating\" -g 60x20+480+280 -e sbcl --load /home/amf/.local/share/nvim/site/pack/packer/start/slimv/slime/start-swank.lisp &'
-vim.g.slimv_swank_scheme = '! st -c \"Floating" -g 60x20+480+280 -e ~/.local/bin/bin/mit-scheme --load /home/amf/.local/share/nvim/site/pack/packer/start/slimv/slime/contrib/swank-mit-scheme.scm &'
-vim.g.swank_block_size = 65536
-vim.g.slimv_leader = '\\'                --Leader key is \
-vim.g.slimv_repl_split = 4               --Vertical split for REPL
-vim.g.slimv_repl_split_size = 80         --REPL split size
-vim.g.paredit_electric_return = 0        --Disable paredit electric return (annoying)
-vim.g.slimv_disable_scheme = 0
---}}}
-
 --Statusline {{{1
---vim.opt.statusline = "%t - %y [%L]%=%{getcwd()}/%=%([%M%R%H%W]%)[%P][%04l,%04v]"
+vim.opt.statusline = "%t - %y [%L]%=%{getcwd()}/%=%([%M%R%H%W]%)[%P][%04l,%04v]"
 --}}}1
