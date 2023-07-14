@@ -70,7 +70,7 @@ config.set('content.headers.accept_language', 'JavaScript', 'https://matchmaker.
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
 # The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+                                 # QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
 # QtWebEngine. * `{qt_version}`: The underlying Qt version. *
 # `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
 # QtWebEngine. * `{upstream_browser_version}`: The corresponding
@@ -86,7 +86,7 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
 # The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+                                 # QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
 # QtWebEngine. * `{qt_version}`: The underlying Qt version. *
 # `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
 # QtWebEngine. * `{upstream_browser_version}`: The corresponding
@@ -102,7 +102,7 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
 # The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+                                 # QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
 # QtWebEngine. * `{qt_version}`: The underlying Qt version. *
 # `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
 # QtWebEngine. * `{upstream_browser_version}`: The corresponding
@@ -187,7 +187,7 @@ config.bind('<Control-p>', 'config-cycle content.private_browsing True False')  
 bind_chained('<;><t>', 'config-cycle content.proxy socks5://localhost:9050 system', 'config-cycle colors.statusbar.normal.bg #3B014D black')    #Toggle TOR mode
 
 ##Change statusbar colors depending on the current toggled settings
-#c.colors.statusbar.command.private.bg = 
+#c.colors.statusbar.command.private.bg =
 #proxy = config.get('content.proxy')
 
 #Default search engine, default page, start page:
