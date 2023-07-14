@@ -1,6 +1,6 @@
 function! s:indent_file()
     let l:view = winsaveview()
-    silent! execute 'silent! normal! gg=G'
+    keepjumps execute 'keepjumps normal! gg=G'
     call winrestview(l:view)
 endfunction
 
