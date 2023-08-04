@@ -2,7 +2,9 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.syntax = "on"
-
+--Splits
+vim.opt.splitright = true
+--Cursor
 vim.opt.guicursor = ""
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
@@ -54,6 +56,20 @@ vim.opt.termguicolors = true
 --Listchars {{{1
 vim.opt.list = true
 vim.o.listchars = 'tab:> ,trail:·'
+--}}}
+
+--Zepl {{{1
+vim.g.repl_config = {
+    scheme = {
+        cmd = 'rlwrap guile'
+    },
+    lisp = {
+        cmd = 'rlwrap sbcl'
+    },
+    matlab = {
+        cmd = 'octave'
+    }
+}
 --}}}
 
 --Statusline {{{1
