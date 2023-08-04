@@ -1,4 +1,7 @@
 function! s:indent_file()
+    if &filetype ==# ""
+        return
+    endif
     let l:view = winsaveview()
     keepjumps execute 'keepjumps normal! gg=G'
     call winrestview(l:view)
