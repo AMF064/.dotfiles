@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>\"", "viw<esc>a\"<esc>bi\"<esc>lel")
 vim.keymap.set("n", "<leader>'", "viw<esc>a'<esc>bi'<esc>lel")
 vim.keymap.set("n", "<leader>u", "mzviw~`z")                                                --Change case of a word
 vim.keymap.set("n", "<leader>U", "mzviw~lve~`z")                                            --Capitalize the first letter
+vim.keymap.set("n", "<leader>r", "<cmd>vertical keep 60 Repl<CR>")                          --Change case of a word
 --}}}1
 
 --Insert mode remaps {{{1
