@@ -9,6 +9,8 @@ mkdir -p /home/amf/Downloads/browser
 #Symbolic links
 ln -s /home/amf/.dotfiles/.xinitrc /home/amf/.xinitrc
 ln -s /home/amf/.dotfiles/.bashrc /home/amf/.bashrc
+ln -s /home/amf/.dotfiles/.kshrc  /home/amf/.kshrc
+ln -s /home/amf/.dotfiles/.profile /home/amf/.profile
 ln -s /home/amf/.dotfiles/.bash_profile /home/amf/.bash_profile
 ln -s /home/amf/.dotfiles/.Xmodmap /home/amf/.Xmodmap
 
