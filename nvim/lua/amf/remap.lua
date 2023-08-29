@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 --Normal mode remaps {{{1
 vim.keymap.set("n", "H", "0")
@@ -64,9 +65,9 @@ vim.keymap.set("n", "<leader>d", vim.cmd.bdelete)               --Delete buffer
 --}}}1
 
 --Terminal remaps {{{1
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")                     --Exit terminal mode
-vim.keymap.set("n", "<M-t>", "<C-w>v<C-w>l<cmd>terminal<CR>")   --Open terminal in vertically split window
-vim.keymap.set("n", "<M-T>", "<C-w>s<C-w>j<cmd>terminal<CR>")   --Open terminal in horizontally split window
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")                         --Exit terminal mode
+vim.keymap.set("n", "<leader>t", "<C-w>v<C-w>l<cmd>terminal<CR>")   --Open terminal in vertically split window
+vim.keymap.set("n", "<leader>T", "<C-w>s<C-w>j<cmd>terminal<CR>")   --Open terminal in horizontally split window
 --}}}1
 
 --Clipboard remaps {{{1
