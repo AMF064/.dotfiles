@@ -7,3 +7,4 @@ dwm/dwm
 dwm/config.h
 slock/slock
 slock/config.h
+slock/*.o
