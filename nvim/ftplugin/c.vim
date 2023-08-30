@@ -1,5 +1,5 @@
 compiler gcc
-set makeprg=gcc\ -Wall\ -Wextra\ -Wpedantic\ -std=c11\ -o\ %<\ %
+setlocal makeprg=gcc\ -Wall\ -Wextra\ -Wpedantic\ -std=c11\ -o\ %<\ %
 
 iabbrev <buffer> ret return ;<left>
 iabbrev <buffer> return NOPENOPENOPE
