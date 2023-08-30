@@ -22,6 +22,8 @@ alias rmcookies='rm -vr ~/.local/share/qutebrowser/cookies ~/.local/share/qutebr
 alias rmtrash='rm -vr ~/.local/share/vifm/Trash/'
 alias poweroff='systemctl poweroff'
 alias e='$EDITOR'
+alias r='$READER'
+alias v='$VIEWER'
 alias java='java -classpath ./../bin/'
 alias gdb='gdb -q'
 

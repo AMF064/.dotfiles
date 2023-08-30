@@ -15,6 +15,7 @@ FILEMAN="vifm"
 EDITOR="/usr/bin/nvim"
 BROWSER="qutebrowser"
 READER="zathura"
+VIEWER="sxiv"
 PATH=$PATH:$HOME/.local/bin
 PATH="$PATH:/home/amf/.local/bin/"
 PATH="$PATH:$JAVA_HOME/bin/"
