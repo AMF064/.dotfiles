@@ -14,7 +14,7 @@ fi
 setxkbmap gb &
 
 #Keymaps
-string=$(xmodmap -pk | grep -E "^\s*(66|37)" | awk '{print $3}' | tr '\n' ' ')
+string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
 [ "$string" = "(Control_L) (Caps_Lock) " ] && xmodmap $HOME/.Xmodmap &         #Verify the order
 #xmodmap $HOME/.Xmodmap &
 
@@ -30,9 +30,9 @@ xset b 0
 #Variables for setting the statusbar
 status() { \
     #IP address
-    ip -4 addr show wlp3s0 | grep inet | awk '{print $2}' | sed 's/\/.*//g' && echo "|"
+    ip -4 addr show wlp3s0 | awk '/inet/{print $2}' | sed 's/\/.*//g' && echo "|"
     #Volume
-    echo "V:" && amixer sget Master | grep "%" | awk '{print $4}' | sed "s/\[//g;s/\]//g" && echo "|"
+    echo "V:" && amixer sget Master | awk '/%/{print $4}' | sed "s/\[//g;s/\]//g" && echo "|"
     #Battery
     echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
     #Date
