@@ -2,12 +2,12 @@
 #alt + Escape
 #"$XDG_CONFIG_HOME"/sxhkd/functions
 super + b
-$BROWSER
+ $BROWSER
 super + shift + f
-$TERMINAL -e $FILEMAN
+ $TERMINAL -e $FILEMAN
 super + shift + m
-$TERMINAL -e ncmpcpp
+ $TERMINAL -e ncmpcpp
 super + e
-$TERMINAL -e $EDITOR
+ $TERMINAL -e $EDITOR
 super + F11
-$TERMINAL -c "Floating" -g 60x20+480+280 -e wificonnect
+ $TERMINAL -c "Floating" -g 60x20+480+280 -e wificonnect
