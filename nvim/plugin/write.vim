@@ -1,5 +1,5 @@
 function! s:indent_file()
-    if &filetype ==# ""
+    if &filetype ==# "" || &filetype ==# 'markdown' || &filetype ==# 'conf'
         return
     endif
     let l:view = winsaveview()
@@ -11,7 +11,7 @@ endfunction
 augroup please_be_nice
     au!
     " Indent
-    autocmd BufWritePre * silent normal =gg']=G
+    autocmd BufWritePre * silent call <SID>indent_file()
     " Remove trailing whitespace
     autocmd BufWritePre * :%s/\s\+$//e
 augroup end
