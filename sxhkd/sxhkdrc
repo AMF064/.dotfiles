@@ -1,6 +1,8 @@
 # Reload functions
 #alt + Escape
 #"$XDG_CONFIG_HOME"/sxhkd/functions
+super + Escape
+ pkill sxhkd && sxhkd
 super + b
  $BROWSER
 super + shift + f
@@ -11,3 +13,7 @@ super + e
  $TERMINAL -e $EDITOR
 super + F11
  $TERMINAL -c "Floating" -g 60x20+480+280 -e wificonnect
+super + ctrl + Return
+ $TERMINAL -e tmux
+super + g
+ gimp
