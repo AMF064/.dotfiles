@@ -13,4 +13,4 @@ export PATH="$PATH:$JAVA_HOME/bin/"
 export CLASSPATH="$JAVA_HOME/lib/"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
-startx
+xset q > /dev/null 2>&1 || startx
