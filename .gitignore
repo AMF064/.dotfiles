@@ -1,6 +1,6 @@
 #No .o files
 *.o
-dwm/\.*.o
+*/\.*.[ao]
 tags
 nvim/plugin/packer_compiled.lua
 dwm/dwm
