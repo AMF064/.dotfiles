@@ -19,6 +19,7 @@ alias rmhist='rm -vr ~/.local/share/qutebrowser/{cmd-history,history*,sessions} 
 alias rmcookies='rm -vr ~/.local/share/qutebrowser/cookies ~/.local/share/qutebrowser/webengine/Cookies*'
 alias rmtrash='rm -vr ~/.local/share/vifm/Trash/'
 alias poweroff='systemctl poweroff'
+alias godir='cd $(vifm --choose-dir -)'
 alias e='$EDITOR'
 alias r='$READER'
 alias v='$VIEWER'
