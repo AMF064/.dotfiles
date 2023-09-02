@@ -7,12 +7,14 @@ super + b
  $BROWSER
 super + shift + f
  $TERMINAL -e $FILEMAN
+super + shift + s
+ $TERMINAL -c "Scratch"
 super + shift + m
  $TERMINAL -e ncmpcpp
 super + e
  $TERMINAL -e $EDITOR
 super + F11
- $TERMINAL -c "Floating" -g 60x20+480+280 -e wificonnect
+ $TERMINAL -c "Scratch" -e wificonnect
 super + ctrl + Return
  $TERMINAL -e tmux
 super + g
