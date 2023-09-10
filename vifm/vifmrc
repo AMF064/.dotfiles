@@ -116,6 +116,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
     mark b ~/Documents/
     mark d ~/Downloads/browser
     mark s ~/.local/src/
+    mark t ~/TELECO/
 
     " ------------------------------------------------------------------------------
     " Commands
