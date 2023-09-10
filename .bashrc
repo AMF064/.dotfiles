@@ -9,7 +9,7 @@ shopt -s autocd         #No need to write cd
 shopt -s histappend     #Append history, do not overwrite it
 
 alias ls='ls --color=auto'
-alias l='ls -lah'
+alias l='ls -lAh'
 alias es='setxkbmap es && xmodmap .Xmodmap'
 alias gb='setxkbmap gb && xmodmap .Xmodmap'
 alias grep='grep --color=auto'

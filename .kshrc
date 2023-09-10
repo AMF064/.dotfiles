@@ -11,7 +11,7 @@ set -o emacs +o vi
 set -o histexpand
 
 alias ls='ls --color=auto'
-alias l='ls -lah'
+alias l='ls -lAh'
 alias es='setxkbmap es && xmodmap .Xmodmap'
 alias gb='setxkbmap gb && xmodmap .Xmodmap'
 alias grep='grep --color=auto'
