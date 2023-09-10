@@ -11,11 +11,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-setxkbmap gb &
+setxkbmap gb -option ctrl:swapcaps &
 
 #Keymaps
-string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
-[ "$string" = "(Control_L) (Caps_Lock) " ] && xmodmap $HOME/.Xmodmap &         #Verify the order
+#string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
+#[ "$string" = "(Control_L) (Caps_Lock) " ] && xmodmap $HOME/.Xmodmap &         #Verify the order
 #xmodmap $HOME/.Xmodmap &
 
 $HOME/.fehbg &
