@@ -78,10 +78,10 @@ vim.keymap.set("n", "<leader>p", "\"+p")         --Pasting from the + register
 --}}}1
 
 --Quickfix list remaps {{{1
-vim.keymap.set("n", "<leader>o", vim.cmd.copen)         --Open the quickix list
+vim.keymap.set("n", "<leader>o", vim.fn['personal#ToggleQuickFix'])         --Open the quickix list
 vim.keymap.set("n", "<C-k>", vim.cmd.cprev)             --Up in the quickfix list
 vim.keymap.set("n", "<C-j>", vim.cmd.cnext)             --Down in the quickfix list
-vim.keymap.set("n", "<leader>O", vim.cmd.lopen)         --Open the local window quickfix list
+vim.keymap.set("n", "<leader>O", vim.fn['personal#ToggleLocationList'])         --Open the local window quickfix list
 vim.keymap.set("n", "<leader>k", vim.cmd.lprev)         --Up in the quickfix list (local)
 vim.keymap.set("n", "<leader>j", vim.cmd.lnext)         --Down in the quickfix list (local)
 --}}}1
@@ -93,5 +93,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>")    --Chmod the bash fil
 --Abbreviations{{{1
 vim.cmd [[
 cabbrev hg helpgrep
+cabbrev wm write \| make
 ]]
 --}}}1
