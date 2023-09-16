@@ -1,7 +1,6 @@
 # Dotfiles
 Incomplete, use at your own risk!
-These dotfiles are as minimalist as possible, in order to be used in any computer,
-regardless of its specs.
+My dotfiles for the Linux programs I use.
 
 ## Usage
 
@@ -15,4 +14,4 @@ Install Quicklisp from SBCL.
 
 ## Activate Neovim plugins
 Neovim plugins have to be reactivated when installing the dotfiles. For that, clone the [packer.nvim](https://github.com/wbthomason/packer.nvim) repository.
-Then open Neovim, give a shoutout to the file ~/.config/nvim/lua/amf/packer.lua and run :PackerSync.
+Then open Neovim, source the file ~/.config/nvim/lua/amf/packer.lua and run :PackerSync.
