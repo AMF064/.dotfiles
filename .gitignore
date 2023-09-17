@@ -10,6 +10,7 @@ vifm/scripts
 vifm/vifm-help.txt
 dwm/dwm
 dwm/config.h
+qutebrowser/bookmarks
 slock/slock
 slock/config.h
 slock/*.o
