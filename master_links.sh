@@ -1,5 +1,5 @@
 #Remove old files
-#rm /home/amf/.bashrc
+rm /home/amf/.bashrc
 
 #Make directories
 #mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm /home/amf/.config/mpd /home/amf/.config/ncmpcpp /home/amf/.config/nvim
@@ -11,6 +11,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 symLink() {
     filename="$SCRIPT_DIR/$1"
     destination="$HOME/$2"
+
+    mkdir -p "$(dirname $destination)"
 
     if [ ! -L "$destination" ]; then
         if [ -e "$destination" ]; then
