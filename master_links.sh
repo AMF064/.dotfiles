@@ -16,6 +16,7 @@ symLink() {
         if [ -e "$destination" ]; then
             echo "[ERROR] $destination exists but is not a symlink. Fix manually" && exit 1
         else
+            ln -s $filename $destination
             echo "[OK] $filename -> $destination"
         fi
     else
