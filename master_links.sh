@@ -2,7 +2,7 @@
 #rm /home/amf/.bashrc
 
 #Make directories
-#mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm /home/amf/.config/mpd /home/amf/.config/ncmpcpp /home/amf/.config/nvim
+#mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm /home/amf/.config/mpd /home/amf/.config/ncmpcpp /home/amf/.config/nvim /home/amf/.config/tmux
 #mkdir -p /home/amf/Pictures/wallpapers
 #mkdir -p /home/amf/Downloads/browser
 
@@ -12,12 +12,14 @@ symLink() {
     filename="$SCRIPT_DIR/$1"
     destination="$HOME/$2"
 
-    mkdir -p "$(dirname $destination)"
 
     if [ ! -L "$destination" ]; then
         if [ -e "$destination" ]; then
             echo "[ERROR] $destination exists but is not a symlink. Fix manually" && exit 1
         else
+            if [ ! -d "$filename" ]; then
+                mkdir -p "$(dirname "$destination")"
+            fi
             ln -s $filename $destination
             echo "[OK] $filename -> $destination"
         fi
