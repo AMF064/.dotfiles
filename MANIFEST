@@ -1,0 +1,14 @@
+.xinitrc:.xinitrc
+.bashrc:.bashrc
+.kshrc:.kshrc
+.profile:.profile
+.bash_profile:.bash_profile
+.Xmodmap:.Xmodmap
+bin:.local/bin
+qutebrowser/:.config/qutebrowser/
+sxhkdrc:.config/sxhkd/sxhkdrc
+vifm/:.config/vifm/
+nvim/:.config/nvim/
+mpd.conf:.config/mpd/mpd.conf
+ncmpcpp/:.config/ncmpcpp/
+wallpapers/:Pictures/wallpapers/
