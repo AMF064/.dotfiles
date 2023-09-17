@@ -3,8 +3,11 @@
 */\.*.[ao]
 *.diff
 *.orig
+*.json
 tags
 nvim/plugin/packer_compiled.lua
+vifm/scripts
+vifm/vifm-help.txt
 dwm/dwm
 dwm/config.h
 slock/slock
