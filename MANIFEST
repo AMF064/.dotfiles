@@ -13,5 +13,6 @@ zathurarc:.config/zathura/zathurarc
 vifm/:.config/vifm/
 nvim/:.config/nvim/
 mpd.conf:.config/mpd/mpd.conf
+tmux.conf:.config/tmux/tmux.conf
 ncmpcpp/:.config/ncmpcpp/
 wallpapers/:Pictures/wallpapers/
