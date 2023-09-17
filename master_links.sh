@@ -1,5 +1,5 @@
 #Remove old files
-rm /home/amf/.bashrc
+#rm /home/amf/.bashrc
 
 #Make directories
 #mkdir /home/amf/.config /home/amf/.config/qutebrowser /home/amf/.config/sxhkd /home/amf/.config/vifm /home/amf/.config/mpd /home/amf/.config/ncmpcpp /home/amf/.config/nvim
