@@ -4,9 +4,12 @@
 .profile:.profile
 .bash_profile:.bash_profile
 .Xmodmap:.Xmodmap
+.gitconfig:.gitconfig
+.sbclrc:.sbclrc
 bin:.local/bin
 qutebrowser/:.config/qutebrowser/
 sxhkdrc:.config/sxhkd/sxhkdrc
+zathurarc:.config/zathura/zathurarc
 vifm/:.config/vifm/
 nvim/:.config/nvim/
 mpd.conf:.config/mpd/mpd.conf
