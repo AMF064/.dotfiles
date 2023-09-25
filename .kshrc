@@ -12,8 +12,6 @@ set -o histexpand
 
 alias ls='ls --color=auto'
 alias l='ls -lAh'
-alias es='setxkbmap es && xmodmap .Xmodmap'
-alias gb='setxkbmap gb && xmodmap .Xmodmap'
 alias grep='grep --color=auto'
 alias suck='rm -f config.h && sudo make clean install'
 alias rmcache='rm -vr ~/.cache'

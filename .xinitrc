@@ -11,7 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-setxkbmap gb -option ctrl:swapcaps &
+setxkbmap gb,es -option ctrl:swapcaps,grp:shifts_toggle &
 
 #Keymaps
 #string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
