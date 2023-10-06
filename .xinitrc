@@ -11,7 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-setxkbmap gb,es -option ctrl:swapcaps,grp:shifts_toggle &
+setxkbmap -layout gb,es -option ctrl:swapcaps,grp:shifts_toggle &
 
 #Keymaps
 #string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
@@ -32,7 +32,7 @@ status() { \
     #IP address
     ip -4 addr show wlp3s0 | awk '/inet/{print $2}' | sed 's/\/.*//g' && echo "|"
     #Volume
-    echo "V:" && amixer sget Master | awk '/%/{print $4}' | sed "s/\[//g;s/\]//g" && echo "|"
+    echo "V:" && amixer sget Master | awk '/%/{print $NF $4}' | sed "s/\[//g;s/\]$//g;s/\]/ /g" && echo "|"
     #Battery
     echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
     #Date
