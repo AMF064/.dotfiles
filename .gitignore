@@ -8,10 +8,11 @@ tags
 nvim/plugin/packer_compiled.lua
 vifm/scripts
 vifm/vifm-help.txt
+bin/nyxt
+ncmpcpp/error.log
 dwm/dwm
 dwm/config.h
 qutebrowser/bookmarks
 slock/slock
 slock/config.h
 slock/*.o
-       /bin/nyxt
