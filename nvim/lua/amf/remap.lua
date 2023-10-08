@@ -15,7 +15,7 @@ vim.keymap.set("n", "<leader>R", "<cmd>keep botright 10 Repl<CR>")              
 --}}}1
 
 --Insert mode remaps {{{1
-vim.keymap.set("i", "<C-c>", "<nop>")                   --Disable C-c
+--vim.keymap.set("i", "<C-c>", "<nop>")                   --Disable C-c
 vim.keymap.set("i", "<C-BS>", "<C-w>")                  --Delete words with Control-Backspace
 vim.keymap.set("i", "<C-u>", "<esc>mzviw~`za")          --Capitalize  word
 vim.keymap.set("i", "<M-u>", "<esc>mzviw~lve~`za")      --Capitalize the first letter
