@@ -36,7 +36,7 @@ status() { \
     #Battery
     echo "B:" && acpi | sed 's/,//g' | awk '{print $4}' && echo "|"
     #Date
-    date +"%D %R"
+    date +"%d/%m/%y %R"
 }
 
 
