@@ -1,0 +1,3 @@
+OPTIONS="POWEROFF SLEEP REBOOT"
+choice=$(echo $OPTIONS | tr ' ' '\n' | dmenu -p "Action:" -l 3 | awk '{print tolower($0)}')
+[[ "$choice" == "sleep" ]] && systemctl hybrid-sleep || systemctl $choice

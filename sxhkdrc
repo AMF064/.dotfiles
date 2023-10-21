@@ -3,6 +3,8 @@
 #"$XDG_CONFIG_HOME"/sxhkd/functions
 super + Escape
  pkill sxhkd && sxhkd
+super + End
+ power
 super + b
  $BROWSER
 super + shift + f
