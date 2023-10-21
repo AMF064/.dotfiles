@@ -50,13 +50,15 @@ static const Layout layouts[] = {
     { "[M]",      monocle },
 };
 
+/* helper for spawning shell commands in the pre dwm-5.0 fashion */
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
 /* Custom functions*/
 /* Spawn a command and refresh the statusbar */
 void
 spawn_refbar(const Arg *arg){
     spawn(arg);
-    char *const cmd[] = {"pkill", "sleep", NULL};
-    Arg a = {.v = cmd};
+    Arg a = { .v = (const char*[]) {"pkill", "-o", "sleep", NULL}};
     spawn(&a);
 }
 
@@ -70,8 +72,6 @@ spawn_refbar(const Arg *arg){
 { MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 { MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -80,7 +80,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[] = { "amixer", "sset", "Master", "5%+", NULL };
 static const char *downvol[] = { "amixer", "sset", "Master", "5%-", NULL };
 
-// for muting/unmuting //
+/* for muting/unmuting */
 static const char *mute[] = { "amixer", "-q", "set", "Master", "toggle", NULL };
 
 static const Key keys[] = {
