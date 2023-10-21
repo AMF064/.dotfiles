@@ -161,20 +161,20 @@ c.fileselect.single_file.command = ["st", "-e", "vifm", "--choose-files", "{}"]
 c.content.blocking.method='both'
 c.content.blocking.adblock.lists = [
         #        "https://easylist.to/easylist/easylist.txt",
-        "https://easylist.to/easylist/easyprivacy.txt",
-        "https://secure.fanboy.co.nz/fanboy-annoyance.txt",
-        "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt",
-        "https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2023.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
-        "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
-        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
+        #"https://easylist.to/easylist/easyprivacy.txt",
+        #"https://secure.fanboy.co.nz/fanboy-annoyance.txt",
+        #"https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt",
+        #"https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/legacy.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2023.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/badware.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/badlists.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt",
+        #"https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+        #"https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
         ]
 
 ##Keybindings
