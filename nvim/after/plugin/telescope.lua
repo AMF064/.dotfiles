@@ -16,9 +16,12 @@ end)
     --    defaults = {
         --        vimgrep_arguments = {
             --            "grep",
-            --            "-rn",
-            --            "-l",
+            --            "-E",
+            --            "-H",
+            --            "-T",
+            --            "-rnb",
             --            "--color=never",
+            --            "--ignore-case",
             --        }
             --    }
             --}
