@@ -9,7 +9,7 @@ set -o allexport
 
 CDPATH=.:$HOME
 ENV=$HOME/.kshrc
-MANSECT="3:3p:1:1p:n:l:8:0:0p:2:3type:5:4:9:6:7"
+MANSECT=2:3:3p:1:1p:n:l:8:0:0p:3type:5:4:9:6:7
 TERMINAL="st"
 JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 FILEMAN="vifm"
@@ -25,4 +25,4 @@ MAILCHECK=0
 #MESA_GLSL_VERSION_OVERRIDE=330
 #MESA_GL_VERSION_OVERRIDE=3.3
 
-xset q > /dev/null 2>&1 || startx
+xset q > /dev/null 2>&1 || exec startx
