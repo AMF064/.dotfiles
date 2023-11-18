@@ -149,7 +149,7 @@ c.colors.webpage.darkmode.policy.images = "never"
 c.colors.webpage.preferred_color_scheme = "dark"
 
 #Editor command
-c.editor.command = ["nvim", "+{line}", "{file}"]
+c.editor.command = ["nvim", "{file}", "+{line}"]
 
 #Fileselect commands
 c.fileselect.handler = "external"
@@ -193,20 +193,24 @@ bind_chained('<;><t>', 'config-cycle content.proxy socks5://localhost:9050 syste
 c.url.searchengines = {'DEFAULT':'https://searxng.nicfab.eu/searxng/search?q={}'}
 c.url.default_page = "https://searxng.nicfab.eu/"
 c.url.start_pages = "https://searxng.nicfab.eu/"
+#Try https://startpage.com someday
 
 #{"DEFAULT": "https://duckduckgo.com/?q={}"}
 
 #Emacs keybindings for insert mode
-config.bind('<Ctrl-a>', 'fake-key <Home>', 'insert')
-config.bind('<Ctrl-e>', 'fake-key <End>', 'insert')
-config.bind('<Ctrl-b>', 'fake-key <Left>', 'insert')
-config.bind('<Ctrl-f>', 'fake-key <Right>', 'insert')
-config.bind('<Ctrl-p>', 'fake-key <Up>', 'insert')
-config.bind('<Ctrl-n>', 'fake-key <Down>', 'insert')
-config.bind('<Alt-f>', 'fake-key <Ctrl-Right>', 'insert')
-config.bind('<Alt-b>', 'fake-key <Ctrl-Left>', 'insert')
-config.bind('<Alt-d>', 'fake-key <Ctrl-Delete>', 'insert')
-config.bind('<Ctrl-d>', 'fake-key <Delete>', 'insert')
+config.unbind('<Ctrl-e>', mode='insert')
+
+config.bind('<Ctrl-a>', 'fake-key <Home>',       'insert')
+config.bind('<Alt-e>',  'fake-key <Ctrl-e>',     'insert')
+config.bind('<Ctrl-e>', 'fake-key <End>',        'insert')
+config.bind('<Ctrl-b>', 'fake-key <Left>',       'insert')
+config.bind('<Ctrl-f>', 'fake-key <Right>',      'insert')
+config.bind('<Ctrl-p>', 'fake-key <Up>',         'insert')
+config.bind('<Ctrl-n>', 'fake-key <Down>',       'insert')
+config.bind('<Alt-f>',  'fake-key <Ctrl-Right>', 'insert')
+config.bind('<Alt-b>',  'fake-key <Ctrl-Left>',  'insert')
+config.bind('<Alt-d>',  'fake-key <Ctrl-Delete>','insert')
+config.bind('<Ctrl-d>', 'fake-key <Delete>',     'insert')
 
 #No content autoplay and do not show PDFs in the browser
 c.content.autoplay = False
