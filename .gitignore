@@ -1,6 +1,5 @@
 #No .o files
-*.o
-*/\.*.[ao]
+*.[oa]
 *.diff
 *.orig
 *.json
@@ -16,3 +15,5 @@ qutebrowser/bookmarks
 slock/slock
 slock/config.h
 slock/*.o
+       st/config.h
+       st/*.o
