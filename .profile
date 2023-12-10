@@ -17,6 +17,7 @@ EDITOR="nvim"
 BROWSER="qutebrowser"
 READER="zathura"
 VIEWER="sxiv"
+SCREENSHOT_DIR="$HOME/Pictures/screenshots"
 PATH=$PATH:$HOME/.local/bin
 PATH="$PATH:/home/amf/.local/bin/"
 PATH="$PATH:$JAVA_HOME/bin/"
