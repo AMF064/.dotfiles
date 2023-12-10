@@ -1,0 +1,67 @@
+#!/bin/sh
+
+#Script for taking screenshots with the import utility from ImageMagick
+#   VIEWER, READER and SCREENSHOT_DIR are environment variables set in $HOME/.profile
+
+SCREENSHOT_DIR="${SCREENSHOT_DIR:=$HOME}"
+title="$(date "+%Y_%m_%d_%s")"
+
+NAME="$SCREENSHOT_DIR/$title"
+FORMAT=
+
+format() {
+    FORMAT="$(echo "" | dmenu -p 'Select format (default png):')"
+    [[ -z "$FORMAT" ]] && FORMAT="png"
+}
+
+root() {
+    format
+    import -window root $NAME.$FORMAT
+}
+
+current() {
+    format
+    current="$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
+    import -window "$current" $NAME.$FORMAT
+}
+
+selection() {
+    format
+    selection="$(xprop > /dev/null && xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')"
+    import -window "$selection" $NAME.$FORMAT
+}
+
+region() {
+    format
+    import "$NAME.$FORMAT"
+}
+
+shoot() {
+    mkdir -p "$SCREENSHOT_DIR"
+    option="$(printf "ROOT\nCURRENT\nSELECT\nREGION" | dmenu -p "TAKE A SCREENSHOT" -l 3)"
+    [[ -z "$option" ]] && (echo "Invalid option $opion: operation canceled"; exit 0)
+    case $option in
+        "ROOT") root ;;
+        "CURRENT") current ;;
+        "SELECT") selection ;;
+        "REGION") region ;;
+        *)
+            echo "Invalid option $option: the operation has been canceled"
+            exit 0
+            ;;
+    esac
+}
+
+
+view() {
+    viewer=
+    case $FORMAT in
+        "pdf" | "ps") viewer="$READER" ;;
+        *) viewer="$VIEWER" ;;
+    esac
+    [[ -f "$NAME.$FORMAT" ]] && $viewer $NAME.$FORMAT
+}
+
+[[ -z "$DISPLAY" ]] && (echo "There is no active display; X is probably down. Aborting"; exit 1)
+shoot
+view
