@@ -37,14 +37,14 @@ vim.keymap.set("o", "il@", ':<c-u>execute "normal! ?@\r:nohlsearch\rhvb"<cr>')
 vim.keymap.set("o", "al@", ':<c-u>execute "normal! ?@\r:nohlsearch\rlvE"<cr>')
 --}}}1
 
---Command-line remaps (Emacs mode) {{{1
-vim.keymap.set("c", "<C-b>", "<Left>")
-vim.keymap.set("c", "<M-b>", "<C-Left>")
-vim.keymap.set("c", "<C-f>", "<Right>")
-vim.keymap.set("c", "<M-f>", "<C-Right>")
-vim.keymap.set("c", "<C-a>", "<Home>")
-vim.keymap.set("c", "<C-t>", "<C-f>")
-vim.keymap.set("c", "<C-d>", "<delete>")
+--Command-line remaps (Emacs mode) (COMMENTED){{{1
+--vim.keymap.set("c", "<C-b>", "<Left>")
+--vim.keymap.set("c", "<M-b>", "<C-Left>")
+--vim.keymap.set("c", "<C-f>", "<Right>")
+--vim.keymap.set("c", "<M-f>", "<C-Right>")
+--vim.keymap.set("c", "<C-a>", "<Home>")
+--vim.keymap.set("c", "<C-t>", "<C-f>")
+--vim.keymap.set("c", "<C-d>", "<delete>")
 --}}}1
 
 --File navigation {{{1
