@@ -4,5 +4,6 @@
 [alias]
     co = checkout
     b = branch
-    st = stash
+    st = status
+    ss = stash
     cm = commit
