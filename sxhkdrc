@@ -21,3 +21,5 @@ super + ctrl + Return
  $TERMINAL -e tmux
 super + g
  gimp
+Print
+ screenshot

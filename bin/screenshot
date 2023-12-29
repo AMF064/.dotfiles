@@ -10,7 +10,7 @@ NAME="$SCREENSHOT_DIR/$title"
 FORMAT=
 
 format() {
-    FORMAT="$(echo "" | dmenu -p 'Select format (default png):')"
+    FORMAT="$(echo "" > /dev/null | dmenu -p 'Select format (default png):')"
     [[ -z "$FORMAT" ]] && FORMAT="png"
 }
 
@@ -38,7 +38,7 @@ region() {
 
 shoot() {
     mkdir -p "$SCREENSHOT_DIR"
-    option="$(printf "ROOT\nCURRENT\nSELECT\nREGION" | dmenu -p "TAKE A SCREENSHOT" -l 3)"
+    option="$(printf "ROOT\nCURRENT\nSELECT\nREGION" | dmenu -p "TAKE A SCREENSHOT" -l 4)"
     [[ -z "$option" ]] && (echo "Invalid option $opion: operation canceled"; exit 0)
     case $option in
         "ROOT") root ;;
