@@ -8,13 +8,13 @@ super + End
 super + b
  $BROWSER
 super + shift + f
- $TERMINAL -e $FILEMAN
+ $FILEMAN
 super + shift + s
  $TERMINAL -c "Scratch"
 super + shift + m
  $TERMINAL -e ncmpcpp
 super + e
- $TERMINAL -e $EDITOR
+ $EDITOR
 super + F11
  $TERMINAL -c "Scratch" -e wificonnect
 super + ctrl + Return

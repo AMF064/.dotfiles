@@ -3,8 +3,8 @@
 #
 export TERMINAL="st"
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
-export FILEMAN="vifm"
-export EDITOR="nvim"
+export FILEMAN="$TERMINAL -e vifm"
+export EDITOR="$TERMINAL -e vim"
 export BROWSER="qutebrowser"
 export READER="zathura"
 export VIEWER="sxiv"
