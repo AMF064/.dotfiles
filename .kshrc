@@ -27,6 +27,8 @@ alias java='java -classpath ./../bin/'
 alias gdb='gdb -q'
 
 #Syntax for AT&T ksh:
-export PS1='$(print -n "┌[$USER@`hostname` "; [[ "${PWD##*/}" == "$USER" ]] && print -n "~" || print -n "${PWD##*/}" ; print -n "] `[[ -n "$(git branch 2>/dev/null)" ]] && echo \($(git branch | awk \"/\*/{print $NF}\" 2> /dev/null)\)`\n└£ ")'
-#Valid syntax for oksh:
-#export PS1='┌[\u@\h \W]\n└£ '
+if [[ "$(uname)" == "OpenBSD" ]] ; then
+    export PS1='┌[\u@\h \W]\n└£ '
+else
+    export PS1='$(print -n "┌[$USER@`hostname` "; [[ "${PWD##*/}" == "$USER" ]] && print -n "~" || print -n "${PWD##*/}" ; print -n "] `[[ -n "$(git branch 2>/dev/null)" ]] && echo \($(git branch | awk \"/\*/{print $NF}\" 2> /dev/null)\)`\n└£ ")'
+fi
