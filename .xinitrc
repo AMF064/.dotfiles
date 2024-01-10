@@ -30,9 +30,9 @@ xset b 0
 #Variables for setting the statusbar
 status() { \
     #Ethernet
-    echo "E: " && ip -6 addr show enp0s25 | awk '/inet6/{print $2}' | sed 's/\/.*//g' && echo "|"
+    echo "E:" && ip -6 addr show enp0s25 | awk '/inet6/{print $2}' | sed 's/\/.*//g' && echo "|"
     #IP address
-    echo "W: " && ip -4 addr show wlp3s0 | awk '/inet/{print $2}' | sed 's/\/.*//g' && echo "|"
+    echo "W:" && ip -4 addr show wlp3s0 | awk '/inet/{print $2}' | sed 's/\/.*//g' && echo "|"
     #Volume
     echo "V:" && amixer sget Master | awk '/%/{print $NF $4}' | sed "s/\[//g;s/\]$//g;s/\]/ /g" && echo "|"
     #Battery
