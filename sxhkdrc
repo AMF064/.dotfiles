@@ -18,7 +18,7 @@ super + e
 super + F11
  $TERMINAL -c "Scratch" -e wificonnect
 super + ctrl + Return
- $TERMINAL -e tmux
+ $TERMINAL -e tmux new -A -s 0
 super + g
  gimp
 Print
