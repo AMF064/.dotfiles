@@ -4,7 +4,7 @@
 export TERMINAL="st"
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export FILEMAN="vifm"
-export FILEMA_TERM_OPEN="$TERMINAL -e $FILEMAN"
+export FILEMAN_TERMINAL_OPEN="$TERMINAL -e $FILEMAN"
 export EDITOR="vim"
 export EDITOR_TERM_OPEN="$TERMINAL -e $EDITOR"
 export BROWSER="qutebrowser"
