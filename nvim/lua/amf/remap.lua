@@ -67,6 +67,11 @@ vim.keymap.set("n", "<leader>d", vim.cmd.bdelete)               --Delete buffer
 
 --Terminal remaps {{{1
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")                         --Exit terminal mode
+vim.keymap.set("t", "<M-[>", "<Esc>")                               --Send Esc key to the terminal emulator
+vim.keymap.set("t", "<M-h>", "<C-\\><C-n><C-w>h")                   --Jump to the left window without hitting Esc
+vim.keymap.set("t", "<M-j>", "<C-\\><C-n><C-w>j")                   --Jump to the window below without hitting Esc
+vim.keymap.set("t", "<M-k>", "<C-\\><C-n><C-w>k")                   --Jump to the upper window without hitting Esc
+vim.keymap.set("t", "<M-l>", "<C-\\><C-n><C-w>l")                   --Jump to the right window without hitting Esc
 vim.keymap.set("n", "<leader>t", "<C-w>v<C-w>l<cmd>terminal<CR>")   --Open terminal in vertically split window
 vim.keymap.set("n", "<leader>T", "<C-w>s<C-w>j<cmd>terminal<CR>")   --Open terminal in horizontally split window
 --}}}1
