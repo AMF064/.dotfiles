@@ -16,3 +16,5 @@ mpd.conf:.config/mpd/mpd.conf
 tmux.conf:.config/tmux/tmux.conf
 ncmpcpp/:.config/ncmpcpp
 wallpapers/:Pictures/wallpapers
+dwm/:.config/dwm
+st/:.config/st
