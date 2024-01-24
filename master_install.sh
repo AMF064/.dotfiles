@@ -8,20 +8,21 @@ case "$(uname)" in
         INSTALL="pkg_add"
         ;;
     Linux)
-        case "$(hostnamectl | awk '/Operating System/{print $3}')" in
-            Arch)
+        DISTRO_NAME="$(awk -F'=' '/^ID/{print $NF}' /etc/*-release)"
+        case "$DISTRO_NAME" in
+            arch)
                 INSTALL="pacman -S"
                 ;;
-            Parabola)
+            parabola)
                 INSTALL="pacman -S"
                 ;;
-            Alpine)
+            alpine)
                 INSTALL="apk add"
                 ;;
-            Void)
+            void)
                 INSTALL="xbps-install"
                 ;;
-            Gentoo)
+            gentoo)
                 INSTALL="emerge -atv"
                 ;;
             *)
