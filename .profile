@@ -28,4 +28,5 @@ MAILCHECK=0
 #MESA_GLSL_VERSION_OVERRIDE=330
 #MESA_GL_VERSION_OVERRIDE=3.3
 
-xset q > /dev/null 2>&1 || exec startx
+[[ -z $DISPLAY && "$(tty)" == "/dev/tty1" ]] && startx
+#xset q > /dev/null 2>&1 || exec startx
