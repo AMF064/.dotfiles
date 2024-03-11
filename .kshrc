@@ -8,7 +8,7 @@
 #Emacs mode
 set -o emacs +o vi
 #History expansion
-set -o histexpand
+set -o csh-history
 
 alias ls='ls --color=auto'
 alias l='ls -lAh'
