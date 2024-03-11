@@ -124,7 +124,7 @@ config.set('content.images', True)
 config.set('content.javascript.enabled', True)
 
 #Accept cookies from SearXNG
-config.set('content.cookies.accept', 'all', 'search.broker/*')
+config.set('content.cookies.accept', 'all', 'searxng.site/*')
 
 # Background color of the completion widget for even rows.
 # Type: QssColor
@@ -190,9 +190,9 @@ bind_chained('<;><t>', 'config-cycle content.proxy socks5://localhost:9050 syste
 #proxy = config.get('content.proxy')
 
 #Default search engine, default page, start page:
-c.url.searchengines = {'DEFAULT':'https://search.broker/search?q={}'}
-c.url.default_page = "https://search.broker/"
-c.url.start_pages = "https://search.broker/"
+c.url.searchengines = {'DEFAULT':'https://searxng.site/search?q={}'}
+c.url.default_page = "https://searxng.site/"
+c.url.start_pages = "https://searxng.site/"
 #Try https://startpage.com someday
 
 #{"DEFAULT": "https://duckduckgo.com/?q={}"}
