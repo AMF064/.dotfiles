@@ -1,4 +1,4 @@
-invidious https://iv.nboeck.de/feed/popular
+invidious https://iv.ggtyler.dev/feed/popular
 aula https://aulaglobal.uc3m.es/?lang=es
 virt https://aulavirtual.uc3m.es/uds/page/login
 telematica https://aulavirtual.lab.it.uc3m.es/#/
@@ -30,3 +30,4 @@ bsd_help https://romanzolotarev.com/
 ttys http://linusakesson.net/programming/tty/index.php
 Git_Book https://git-scm.com/book/en/v2
 Computer Networking https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm
+Alternatives https://github.com/mendel5/alternative-front-ends?tab=readme-ov-file
