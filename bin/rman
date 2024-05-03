@@ -1,4 +1,4 @@
 #!/bin/env bash
 
 choice=$(man -k . | dmenu -l 10)
-[ -z $choice ] && exit 0 || echo $choice | awk '{print $1}' | xargs man -Tpdf | zathura -
+[ -z $choice ] && exit 0 || echo $choice | sed -e 's/(\([0-9]\))/\1/g' | awk '{print $2" "$1}' | xargs man -Tpdf | zathura -
