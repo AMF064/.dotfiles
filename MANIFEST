@@ -4,7 +4,9 @@
 .profile:.profile
 .bash_profile:.bash_profile
 .Xmodmap:.Xmodmap
+.gdbinit:.gdbinit
 .gitconfig:.gitconfig
+.guile:.guile
 .sbclrc:.sbclrc
 bin:.local/bin
 qutebrowser/:.config/qutebrowser
