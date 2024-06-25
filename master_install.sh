@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROGRAM_LIST=$(cat PROGRAMS)
+PROGRAM_LIST="$(cat PROGRAMS)"
 
 INSTALL=""
 case "$(uname)" in
@@ -8,7 +8,7 @@ case "$(uname)" in
         INSTALL="pkg_add"
         ;;
     Linux)
-        DISTRO_NAME="$(awk -F'=' '/^ID/{print $NF}' /etc/*-release)"
+        DISTRO_NAME="$(awk -F'=' '/^ID/{print $NF}' /etc/*-release | head -n 1)"
         case "$DISTRO_NAME" in
             arch)
                 INSTALL="pacman -S"
@@ -33,7 +33,7 @@ case "$(uname)" in
 esac
 
 #Install packages in PROGRAMS
-$INSTALL $PROGRAM_LIST
+su -c "$INSTALL $PROGRAM_LIST"
 
 VIM_REPO="git@github.com:AMF064/dotvim.git"
 NVIM_REPO="git@notabug.org:AMF064/dotnvim.git"
@@ -49,14 +49,15 @@ printf "$prompt"
 read editor
     case $editor in
         1|"")
-            $INSTALL vim
+            su -c "$INSTALL vim"
             git clone $VIM_REPO $VIM_PATH
             ;;
         2)
-            $INSTALL neovim
+            su -c "$INSTALL neovim"
             git clone $NVIM_REPO $NVIM_PATH
             ;;
         3)
-            $INSTALL emacs
+            su -c "$INSTALL emacs"
             git clone $EMACS_REPO $EMACS_PATH
             ;;
+    esac
