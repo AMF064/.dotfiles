@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROGRAM_LIST="$(cat PROGRAMS)"
+PROGRAM_LIST="$(cat PROGRAMS | tr '\n' ' ')"
 
 INSTALL=""
 case "$(uname)" in
