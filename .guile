@@ -1,0 +1,4 @@
+(add-to-load-path "/home/amf/.local/share/guile")
+(use-modules (ice-9 readline))
+(use-modules (ice-9 format))
+(activate-readline)
