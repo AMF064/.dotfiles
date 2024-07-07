@@ -27,10 +27,9 @@ alias v='$VIEWER'
 alias java='java -classpath ./../bin/'
 alias gdb='gdb -q'
 
-export PS1='┌[\u@\h \W]\n└£ '
 #Syntax for AT&T ksh:
-#if [[ "$(uname)" == "OpenBSD" ]] ; then
-#    export PS1='┌[\u@\h \W]\n└£ '
-#else
-#    export PS1='$(print -n "┌[$USER@`hostname` "; [[ "${PWD##*/}" == "$USER" ]] && print -n "~" || print -n "${PWD##*/}" ; print -n "] `[[ -n "$(git branch 2>/dev/null)" ]] && echo \($(git branch | awk \"/\*/{print $NF}\" 2> /dev/null)\)`\n└£ ")'
-#fi
+if [[ "$(uname)" == "OpenBSD" ]] ; then
+    export PS1='┌[\u@\h \W]\n└£ '
+else
+    export PS1='$(print -n "┌[$USER@`hostname` "; [[ "${PWD##*/}" == "$USER" ]] && print -n "~" || print -n "${PWD##*/}" ; print -n "] `[[ -n "$(git branch 2>/dev/null)" ]] && echo \($(git branch | awk \"/\*/{print $NF}\" 2> /dev/null)\)`\n└£ ")'
+fi
