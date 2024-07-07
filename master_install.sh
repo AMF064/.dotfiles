@@ -1,6 +1,7 @@
 #!/bin/sh
 
 PROGRAM_LIST="$(cat PROGRAMS | tr '\n' ' ')"
+XORG_LIST="$(cat XORG | tr '\n' ' ')"
 
 INSTALL=""
 case "$(uname)" in
@@ -12,9 +13,11 @@ case "$(uname)" in
         case "$DISTRO_NAME" in
             arch)
                 INSTALL="pacman -S"
+                su -c "$INSTALL $XORG"
                 ;;
             parabola)
                 INSTALL="pacman -S"
+                su -c "$INSTALL $XORG"
                 ;;
             alpine)
                 INSTALL="apk add"
@@ -24,6 +27,7 @@ case "$(uname)" in
                 ;;
             gentoo)
                 INSTALL="emerge -atv"
+                su -c "$INSTALL $XORG"
                 ;;
             *)
                 INSTALL="apt-get install"
@@ -47,17 +51,17 @@ prompt="Choose an editor:\n1) vim\n2) neovim\n3) emacs\nOther characters will ca
 
 printf "$prompt"
 read editor
-    case $editor in
-        1|"")
-            su -c "$INSTALL vim"
-            git clone $VIM_REPO $VIM_PATH
-            ;;
-        2)
-            su -c "$INSTALL neovim"
-            git clone $NVIM_REPO $NVIM_PATH
-            ;;
-        3)
-            su -c "$INSTALL emacs"
-            git clone $EMACS_REPO $EMACS_PATH
-            ;;
-    esac
+case $editor in
+    1|"")
+        su -c "$INSTALL vim"
+        git clone $VIM_REPO $VIM_PATH
+        ;;
+    2)
+        su -c "$INSTALL neovim"
+        git clone $NVIM_REPO $NVIM_PATH
+        ;;
+    3)
+        su -c "$INSTALL emacs"
+        git clone $EMACS_REPO $EMACS_PATH
+        ;;
+esac

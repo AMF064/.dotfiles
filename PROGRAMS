@@ -1,11 +1,6 @@
-xorg-server
-xorg-xinit
-xorg-xsetroot
-xorg-xrandr
-libxft
 ttf-liberation
 ttf-dejavu
-qutebrowser
+w3m
 yt-dlp
 vifm
 dmenu
@@ -20,7 +15,6 @@ sxiv
 mpd
 ncmpcpp
 xclip
-python-adblock
 gdb
 imagemagick
 tmux
