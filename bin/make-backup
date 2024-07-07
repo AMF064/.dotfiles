@@ -1,0 +1,46 @@
+#!/bin/sh
+
+BACKUP_DIRNAME="backup_"$(date +'%Y%m%d')""
+BACKUP_DIRPATH="/opt"
+BACKUP_DIR="$BACKUP_DIRPATH/$BACKUP_DIRNAME"
+IMPORTANT_DIRS="Documents TELECO Videos Pictures"
+
+TAR_CMD="tar cf"
+TAR_FILE="$BACKUP_DIRPATH/$BACKUP_DIRNAME.tar"
+
+ZIP_ALG="gzip"
+ZIP_FILE="$TAR_FILE.gz"
+
+make_backup_file()
+{
+    mkdir -p "$BACKUP_DIR"
+
+    for dir in $IMPORTANT_DIRS; do
+        cp -r $HOME/$dir $BACKUP_DIR
+        echo "Copied $HOME/$dir to $BACKUP_DIR/$dir"
+    done
+
+    $TAR_CMD $TAR_FILE $BACKUP_DIR
+    $ZIP_ALG $TAR_FILE
+
+    rm -rf $BACKUP_DIR $TAR_FILE
+}
+
+move_to_dir()
+{
+    mv $ZIP_FILE $1
+}
+
+usage()
+{
+    echo "Usage: make-backup directory"
+    echo "  directory: the directory in which you wish to save the backup"
+}
+
+if [[ -z "$1" ]]; then
+    usage
+    exit 1
+fi
+
+make_backup_file
+move_to_dir($1)
