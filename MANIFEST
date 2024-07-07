@@ -3,13 +3,11 @@
 .kshrc:.kshrc
 .profile:.profile
 .bash_profile:.bash_profile
-.Xmodmap:.Xmodmap
 .gdbinit:.gdbinit
 .gitconfig:.gitconfig
 .guile:.guile
 .sbclrc:.sbclrc
 bin:.local/bin
-qutebrowser/:.config/qutebrowser
 sxhkdrc:.config/sxhkd/sxhkdrc
 zathurarc:.config/zathura/zathurarc
 vifm/:.config/vifm
