@@ -22,5 +22,12 @@ alias e='$EDITOR'
 alias r='$READER'
 alias v='$VIEWER'
 alias java='java -classpath ./../bin/'
-PS1='┌[\e[1;32m\u\e[0m@\e[1;36m\h\e[0m \W]\n└\$ '
+alias web='w3m'
+
+git_ps1 ()
+{
+    git status > /dev/null 2>&1 && printf " (%b)" $(git branch | awk '/^\*/{print $NF}')
+}
+
+PS1='┌[\e[1;32m\u\e[0m@\e[1;36m\h\e[0m \W]$(git_ps1)\n└\$ '
 PS2='> '
