@@ -13,11 +13,6 @@ fi
 
 setxkbmap -layout gb,es -option ctrl:swapcaps,grp:shifts_toggle &
 
-#Keymaps
-#string=$(xmodmap -pk | awk '/^\s*(66|37)/{print $3}' | tr '\n' ' ')
-#[ "$string" = "(Control_L) (Caps_Lock) " ] && xmodmap $HOME/.Xmodmap &         #Verify the order
-#xmodmap $HOME/.Xmodmap &
-
 $HOME/.fehbg &
 sxhkd &
 
