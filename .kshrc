@@ -26,6 +26,8 @@ alias r='$READER'
 alias v='$VIEWER'
 alias java='java -classpath ./../bin/'
 alias gdb='gdb -q'
+alias web='w3m'
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 git_ps1 ()
 {
